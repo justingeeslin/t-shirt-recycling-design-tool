@@ -1,0 +1,31 @@
+<html>
+	
+	<body>
+		<pattern-pack-board endpoint="/api/pack/sync"></pattern-pack-board>
+		
+		<script type="module">
+		  import "./src/PatternPackBoard.js";
+		
+		  const board = document.querySelector("pattern-pack-board");
+		
+		  const stockRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+		  stockRect.id = "stock-1";
+		  stockRect.setAttribute("x", "20");
+		  stockRect.setAttribute("y", "20");
+		  stockRect.setAttribute("width", "400");
+		  stockRect.setAttribute("height", "250");
+		
+		  const garmentPiece = document.createElementNS("http://www.w3.org/2000/svg", "path");
+		  garmentPiece.id = "front-bodice";
+		  garmentPiece.setAttribute("d", "M 500 100 L 650 100 L 690 260 L 470 260 Z");
+		
+		  board.addStock(stockRect);
+		  board.addGarment(garmentPiece);
+		
+		  board.addEventListener("sync-error", (event) => {
+			console.error("SVG sync failed", event.detail.error);
+		  });
+		</script>
+		
+	</body>
+</html>

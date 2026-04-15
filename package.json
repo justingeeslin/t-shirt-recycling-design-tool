@@ -1,0 +1,19 @@
+{
+  "name": "t-shirt-recycling-design-tool",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "packed-patterns-and-stock-html-element": "github:justingeeslin/packed-patterns-and-stock-html-element",
+    "photo-uploader-to-contour-svg-html-element": "github:justingeeslin/photo-uploader-to-contour-svg-html-element"
+  }
+}
