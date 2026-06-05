@@ -58,6 +58,12 @@
   <body>
 	<div class="layout">
 	  <div class="palette">
+		  <div class="svg-upload">
+			<label>
+			  Add SVG piece:
+			  <input type="file" id="svgPieceUpload" accept=".svg,image/svg+xml" multiple />
+			</label>
+		  </div>
 		<piece-quantity-control
 		  id="triangle-control"
 		  board="board"
@@ -157,6 +163,90 @@
 	  // board.addEventListener("sync-error", (event) => {
 		// console.error("SVG sync failed", event.detail.error);
 	  // });
+	  
+	  const palette = document.querySelector(".palette");
+	  const upload = document.getElementById("svgPieceUpload");
+	  
+	  upload.addEventListener("change", async (event) => {
+		for (const file of event.target.files) {
+		  const svgText = await file.text();
+		  addUploadedSvgPiece(svgText, file.name);
+		}
+	  
+		upload.value = "";
+	  });
+	  
+	  function addUploadedSvgPiece(svgText, filename) {
+		const parser = new DOMParser();
+		const doc = parser.parseFromString(svgText, "image/svg+xml");
+		const uploadedSvg = doc.querySelector("svg");
+	  
+		if (!uploadedSvg) {
+		  console.warn("No SVG found in uploaded file:", filename);
+		  return;
+		}
+	  
+		const pieceName = filename.replace(/\.svg$/i, "");
+		const pieceKind = pieceName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+	  
+		const control = document.createElement("piece-quantity-control");
+		control.setAttribute("board", "board");
+		control.setAttribute("piece-kind", pieceKind);
+		control.setAttribute("label", pieceName);
+		control.setAttribute("value", "0");
+	  
+		// Preview SVG
+		const previewSvg = uploadedSvg.cloneNode(true);
+		previewSvg.setAttribute("slot", "preview");
+		previewSvg.setAttribute("width", "40");
+		previewSvg.setAttribute("height", "40");
+	  
+		// Shape template SVG
+		const template = document.createElement("template");
+		template.setAttribute("slot", "shape");
+	  
+		const shapeSvg = uploadedSvg.cloneNode(true);
+		shapeSvg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+	  
+		prepareSvgForBoard(shapeSvg);
+	  
+		template.content.appendChild(shapeSvg);
+	  
+		control.appendChild(previewSvg);
+		control.appendChild(template);
+	  
+		palette.appendChild(control);
+	  }
+	  
+	  function prepareSvgForBoard(svg) {
+		const shapes = svg.querySelectorAll("path, polygon, rect, circle, ellipse, polyline");
+	  
+		for (const shape of shapes) {
+		  shape.setAttribute("data-draggable", "true");
+		  shape.setAttribute("role", "garment");
+	  
+		  if (!shape.hasAttribute("fill")) {
+			shape.setAttribute("fill", "transparent");
+		  }
+	  
+		  if (!shape.hasAttribute("stroke")) {
+			shape.setAttribute("stroke", "red");
+		  }
+		}
+	  
+		let wrapper = svg.querySelector("g[data-draggable='true']");
+	  
+		if (!wrapper) {
+		  wrapper = document.createElementNS("http://www.w3.org/2000/svg", "g");
+		  wrapper.setAttribute("data-draggable", "true");
+	  
+		  while (svg.firstChild) {
+			wrapper.appendChild(svg.firstChild);
+		  }
+	  
+		  svg.appendChild(wrapper);
+		}
+	  }
 	</script>
   </body>
 </html>
