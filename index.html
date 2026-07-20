@@ -10,10 +10,10 @@
 			
 			--shape-color-stock: black;
 			
-			--top-pallete-height: 6em;
+			--top-pallete-height: 12em;
 			--left-pallete-width: 15em;
 			
-			--ppb-top-offset: calc(var(--top-pallete-height) + 3em);
+			--ppb-top-offset: calc(var(--top-pallete-height) + 4em);
 			--ppb-left-offset: calc(var(--left-pallete-height) + 3em);
 			
 			}
@@ -33,6 +33,9 @@
 			  color: var(--text);
 			  /* background-color: black */
 			}
+			h1 {
+			margin-top: 0;
+			}
 			
 		  .layout {
 			margin: 24px auto;
@@ -40,7 +43,6 @@
 		
 		  .palette {
 			position: fixed;
-			display: flex;
 			/* border: 1px solid var(--border); */
 			padding: 16px;
 			border-radius: 8px;
@@ -63,81 +65,100 @@
 			  stroke: var(--shape-color-stock)
 		  }
 		  
+		  .upload-button {
+			  display: inline-block;
+			  padding: 0.6em 1.2em;
+			  background: #0078d4;
+			  color: white;
+			  border-radius: 8px;
+			  cursor: pointer;
+			  user-select: none;
+			  font-family: sans-serif;
+		  }
+		  
+		  .upload-button:hover { 
+			  background: #005ea6;
+		  }
+		  
 		</style>
 	</head>
   <body>
 	<div class="layout">
-	  <div class="palette" style="height:var(--top-pallete-height);width:97%">
-		  <div class="svg-upload">
-			<label>
-			  Add SVG piece:
-			  <input type="file" id="svgPieceUpload" accept=".svg,image/svg+xml" multiple />
-			</label>
-		  </div>
-		<piece-quantity-control
-		  id="triangle-control"
-		  board="board"
-		  piece-kind="triangle"
-		  label="Triangle"
-		  value="0"
-		>
-		  <svg slot="preview" viewBox="0 0 100 100" width="40" height="40">
-			<polygon points="50,18 82,78 18,78" fill="none" data-draggable="true" role="garment"></polygon>
-		  </svg>
-
-		  <template slot="shape">
-			  <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-				<g data-draggable="true">
-					<polygon points="0,0 10,20 -10,20" fill="transparent" stroke="red" data-draggable="true" role="garment"></polygon>
+	  <div class="palette" style="width:97%">
+		  <h1>Patterns</h1>
+		  <div style="display: flex;">
+			<div class="svg-upload">
+				<input type="file" id="svgPieceUpload" accept=".svg,image/svg+xml" multiple hidden/>
+				<label class="upload-button" for="svgPieceUpload">
+				Add a Pattern (SVG):
+				</label>
+			</div>
+			<piece-quantity-control
+			id="triangle-control"
+			board="board"
+			piece-kind="triangle"
+			label="Triangle"
+			value="0"
+			>
+			<svg slot="preview" viewBox="0 0 100 100" width="40" height="40">
+				<polygon points="50,18 82,78 18,78" fill="none" data-draggable="true" role="garment"></polygon>
+			</svg>
+	
+			<template slot="shape">
+				<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<g data-draggable="true">
+						<polygon points="0,0 10,20 -10,20" fill="transparent" stroke="red" data-draggable="true" role="garment"></polygon>
+					</g>
+				</svg>
+			</template>
+			</piece-quantity-control>
+	
+			<piece-quantity-control
+			id="rect-control"
+			board="board"
+			piece-kind="rectangle"
+			label="Rectangle"
+			value="0"
+			>
+			<svg slot="preview" viewBox="0 0 100 100" width="40" height="40">
+				<rect x="20" y="20" width="60" height="60" fill="transparent"></rect>
+			</svg>
+	
+			<template slot="shape">
+				<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+				<g>
+				<rect data-draggable="true" role="garment" x="0" y="0" width="90" height="60" fill="transparent" ></rect>
 				</g>
-			  </svg>
-		  </template>
-		</piece-quantity-control>
-
-		<piece-quantity-control
-		  id="rect-control"
-		  board="board"
-		  piece-kind="rectangle"
-		  label="Rectangle"
-		  value="0"
-		>
-		  <svg slot="preview" viewBox="0 0 100 100" width="40" height="40">
-			<rect x="20" y="20" width="60" height="60" fill="transparent"></rect>
-		  </svg>
-
-		  <template slot="shape">
-			  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-			<g>
-			  <rect data-draggable="true" role="garment" x="0" y="0" width="90" height="60" fill="transparent" ></rect>
-			</g>
-			  </svg>
-		  </template>
-		</piece-quantity-control>
-
-		<piece-quantity-control
-		  id="sleeve-control"
-		  board="board"
-		  piece-kind="sleeve-front"
-		  label="Sleeve Front"
-		  value="0"
-		>
-		  <svg slot="preview" viewBox="0 0 100 100" width="40" height="40">
-			<path d="M20 35 Q35 15 60 22 L75 70 Q45 85 20 60 Z"
-				  fill="none" ></path>
-		  </svg>
-
-		  <template slot="shape">
-			  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-			<g  data-draggable="true">
-			  <polygon points="256.00,0.00 14.00,344.00 0.00,398.00 246.00,573.00 305.00,526.00" data-draggable="true" role="garment" fill="transparent" stroke-width="3"></polygon>
-			</g>
-			  </svg>
-		  </template>
-		</piece-quantity-control>
+				</svg>
+			</template>
+			</piece-quantity-control>
+	
+			<piece-quantity-control
+			id="sleeve-control"
+			board="board"
+			piece-kind="sleeve-front"
+			label="Sleeve Front"
+			value="0"
+			>
+			<svg slot="preview" viewBox="0 0 100 100" width="40" height="40">
+				<path d="M20 35 Q35 15 60 22 L75 70 Q45 85 20 60 Z"
+					fill="none" ></path>
+			</svg>
+	
+			<template slot="shape">
+				<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+				<g  data-draggable="true">
+				<polygon points="256.00,0.00 14.00,344.00 0.00,398.00 246.00,573.00 305.00,526.00" data-draggable="true" role="garment" fill="transparent" stroke-width="3"></polygon>
+				</g>
+				</svg>
+			</template>
+			</piece-quantity-control>
+		  </div>
 	  </div>
 	  
 	  <div style="display:flex;">
-		<div class="palette" style="position: fixed; top: 10em;width:var(--left-pallete-width)">
+		<div class="palette" style="position: fixed; top: var(--ppb-top-offset);width:var(--left-pallete-width)">
+			<h1>Garment Stock</h1> 
 			<form id="uploadForm">
 				<photo-uploader-to-contour-svg target_selector="#board">
 					<input type="file" id="photos" name="photos[]" multiple required />
