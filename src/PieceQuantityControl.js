@@ -14,7 +14,6 @@ export class PieceQuantityControl extends HTMLElement {
 	this.shadowRoot.innerHTML = `
 	  <style>
 		:host {
-		  display: block;
 		  font-family: sans-serif;
 		}
 

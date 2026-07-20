@@ -9,6 +9,13 @@
 			--shape-width: 2px;
 			
 			--shape-color-stock: black;
+			
+			--top-pallete-height: 6em;
+			--left-pallete-width: 15em;
+			
+			--ppb-top-offset: calc(var(--top-pallete-height) + 3em);
+			--ppb-left-offset: calc(var(--left-pallete-height) + 3em);
+			
 			}
 			@media (prefers-color-scheme: dark) {
 			  :root {
@@ -28,20 +35,23 @@
 			}
 			
 		  .layout {
-			display: grid;
-			grid-template-columns: 300px 1fr;
-			gap: 24px;
-			align-items: start;
-			max-width: 1200px;
 			margin: 24px auto;
 		  }
 		
 		  .palette {
-			border: 1px solid var(--border);
+			position: fixed;
+			display: flex;
+			/* border: 1px solid var(--border); */
 			padding: 16px;
 			border-radius: 8px;
-			display: grid;
-			gap: 12px;
+			background: rgba(255, 255, 255, 0.1);
+			/* background-color:black; */
+			/* border-radius: 16px; */
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(11.9px);
+			-webkit-backdrop-filter: blur(11.9px);
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			z-index: 99
 		  }
 		  
 		  svg polygon, rect, path {
@@ -57,7 +67,7 @@
 	</head>
   <body>
 	<div class="layout">
-	  <div class="palette">
+	  <div class="palette" style="height:var(--top-pallete-height);width:97%">
 		  <div class="svg-upload">
 			<label>
 			  Add SVG piece:
@@ -125,21 +135,24 @@
 		  </template>
 		</piece-quantity-control>
 	  </div>
-	  <div></div>
-	  <form id="uploadForm">
-			<photo-uploader-to-contour-svg target_selector="#board">
-				<input type="file" id="photos" name="photos[]" multiple required />
-			</photo-uploader-to-contour-svg>
-			<button type="submit" id="uploadBtn">Upload</button>
-		</form>
-
-	  <pattern-pack-board>
-		  <svg width="2000" height="1000" xmlns="http://www.w3.org/2000/svg" id="board" viewBox="0 0 2000 1000">
-			  <polygon id="full" points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00" fill="none" role="stock" stroke="red" />
-			  <!-- <polygon id="full2" points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00" fill="none" role="stock" stroke="red" transform="translate(600,0)"/> -->
-				  
-		  </svg>
-	  </pattern-pack-board>
+	  
+	  <div style="display:flex;">
+		<div class="palette" style="position: fixed; top: 10em;width:var(--left-pallete-width)">
+			<form id="uploadForm">
+				<photo-uploader-to-contour-svg target_selector="#board">
+					<input type="file" id="photos" name="photos[]" multiple required />
+				</photo-uploader-to-contour-svg>
+				<button type="submit" id="uploadBtn">Upload</button>
+			</form>	
+		</div>
+		<pattern-pack-board style="position: relative; top: var(--ppb-top-offset);left: 18em;">
+			<svg width="2000" height="1000" xmlns="http://www.w3.org/2000/svg" id="board" viewBox="0 0 2000 1000">
+				<polygon id="full" points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00" fill="none" role="stock" stroke="red" />
+				<!-- <polygon id="full2" points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00" fill="none" role="stock" stroke="red" transform="translate(600,0)"/> -->
+					
+			</svg>
+		</pattern-pack-board>
+	  </div>
 	</div>
 
 	<script type="module">
