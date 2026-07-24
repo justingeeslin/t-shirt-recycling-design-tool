@@ -107,7 +107,7 @@
 			<template slot="shape">
 				<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 					<g data-draggable="true">
-						<polygon points="0,0 10,20 -10,20" fill="transparent" stroke="red" data-draggable="true" role="garment"></polygon>
+						<polygon points="0,0 10,20 -10,20" fill="transparent" stroke="red" data-draggable="true" data-role="garment" role="garment"></polygon>
 					</g>
 				</svg>
 			</template>
@@ -147,8 +147,14 @@
 	
 			<template slot="shape">
 				<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-				<g  data-draggable="true">
-				<polygon points="256.00,0.00 14.00,344.00 0.00,398.00 246.00,573.00 305.00,526.00" data-draggable="true" role="garment" fill="transparent" stroke-width="3"></polygon>
+				<g data-draggable="true">
+				<polygon
+				  points="128.00,0.00 7.00,172.00 0.00,199.00 123.00,286.50 152.50,263.00"
+				  data-draggable="true"
+				  role="garment"
+				  fill="transparent"
+				  stroke-width="3">
+				</polygon>
 				</g>
 				</svg>
 			</template>
@@ -165,11 +171,31 @@
 				</photo-uploader-to-contour-svg>
 				<button type="submit" id="uploadBtn">Upload</button>
 			</form>	
+			
+			<piece-quantity-control
+			id="stock-tshirt-control"
+			board="board"
+			piece-kind="stock-tshirt"
+			label="Stock T-shirt"
+			value="1"
+			>
+			<svg slot="preview" viewBox="0 0 2000 1000" width="40" height="40">
+				<polygon id="full" points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00" fill="none" data-role="stock" role="stock" stroke="red" />
+			</svg>
+			
+			<template slot="shape">
+				<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					
+						<polygon id="full" points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00" fill="none" role="stock" stroke="red" />
+			
+					
+				</svg>
+			</template>
+			</piece-quantity-control>
 		</div>
 		<pattern-pack-board style="position: relative; top: var(--ppb-top-offset);left: 18em;">
 			<svg width="2000" height="1000" xmlns="http://www.w3.org/2000/svg" id="board" viewBox="0 0 2000 1000">
-				<polygon id="full" points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00" fill="none" role="stock" stroke="red" />
-				<!-- <polygon id="full2" points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00" fill="none" role="stock" stroke="red" transform="translate(600,0)"/> -->
+				<!-- <polygon id="full" points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00" fill="none" role="stock" stroke="red" /> -->
 					
 			</svg>
 		</pattern-pack-board>
@@ -256,6 +282,7 @@
 		const shapes = svg.querySelectorAll("path, polygon, rect, circle, ellipse, polyline");
 	  
 		for (const shape of shapes) {
+			console.log("Setting garment role..")
 		  shape.setAttribute("data-draggable", "true");
 		  shape.setAttribute("role", "garment");
 	  
