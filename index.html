@@ -125,6 +125,22 @@
         min-width: 0;
       }
 
+      pattern-pack-board {
+        display: grid;
+        gap: 12px;
+        min-width: 0;
+      }
+
+      .board-scroll {
+        width: 100%;
+        max-height: calc(100vh - 160px);
+        overflow: auto;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--board-bg);
+        overscroll-behavior: contain;
+      }
+
       uploadable-palette,
       pattern-pack-board,
       piece-quantity-control {
@@ -134,12 +150,12 @@
 
       pattern-pack-board svg {
         display: block;
-        width: 100%;
+        width: auto;
+        min-width: 100%;
         height: auto;
-        max-height: calc(100vh - 110px);
+        max-width: none;
+        max-height: none;
         overflow: visible;
-        border: 1px solid var(--border);
-        border-radius: 8px;
         background: var(--board-bg);
       }
 
@@ -182,8 +198,8 @@
           margin: 12px auto;
         }
 
-        pattern-pack-board svg {
-          max-height: none;
+        .board-scroll {
+          max-height: 68vh;
         }
       }
     </style>
@@ -220,40 +236,44 @@
           </button>
         </div>
         <pattern-pack-board>
-          <svg
-            id="board"
-            viewBox="0 0 1200 750"
-            aria-label="Draggable garment parts"
-            style="touch-action: none;"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <pattern id="minor-grid" width="25" height="25" patternUnits="userSpaceOnUse">
-                <path class="grid-minor" d="M 25 0 H 0 V 25" fill="none"></path>
-              </pattern>
-              <pattern id="major-grid" width="100" height="100" patternUnits="userSpaceOnUse">
-                <rect width="100" height="100" fill="url(#minor-grid)"></rect>
-                <path class="grid-major" d="M 100 0 H 0 V 100" fill="none"></path>
-              </pattern>
-            </defs>
+          <div class="board-scroll">
+            <svg
+              id="board"
+              width="1200"
+              height="750"
+              viewBox="0 0 1200 750"
+              aria-label="Draggable garment parts"
+              style="touch-action: none;"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <pattern id="minor-grid" width="25" height="25" patternUnits="userSpaceOnUse">
+                  <path class="grid-minor" d="M 25 0 H 0 V 25" fill="none"></path>
+                </pattern>
+                <pattern id="major-grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                  <rect width="100" height="100" fill="url(#minor-grid)"></rect>
+                  <path class="grid-major" d="M 100 0 H 0 V 100" fill="none"></path>
+                </pattern>
+              </defs>
 
-            <rect class="board-background" x="0" y="0" width="1200" height="750"></rect>
-            <rect class="board-grid" x="0" y="0" width="1200" height="750" fill="url(#major-grid)"></rect>
+              <rect class="board-background" x="0" y="0" width="1200" height="750"></rect>
+              <rect class="board-grid" x="0" y="0" width="1200" height="750" fill="url(#major-grid)"></rect>
 
-            <polygon
-              id="stock-shirt"
-              role="stock"
-              points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00"
-              transform="translate(68 74)"
-            ></polygon>
-          </svg>
+              <polygon
+                id="stock-shirt"
+                role="stock"
+                points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00"
+                transform="translate(68 74)"
+              ></polygon>
+            </svg>
+          </div>
         </pattern-pack-board>
       </section>
     </main>
 
     <script type="module">
       import "/node_modules/packed-patterns-and-stock-html-element/src/UploadablePalette.js";
-      import "/node_modules/packed-patterns-and-stock-html-element/src/PatternPackBoard.js";
+      import "/src/ScrollablePatternPackBoard.js";
 
       const patternPalette = document.getElementById("pattern-palette");
       const stockPalette = document.getElementById("stock-palette");
