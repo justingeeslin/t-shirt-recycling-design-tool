@@ -10,10 +10,15 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:ui",
+    "test:ui": "playwright test",
+    "test:ui:preview": "BASE_URL=https://phpstack-1496460-6260926.cloudwaysapps.com/ playwright test"
   },
   "dependencies": {
-    "packed-patterns-and-stock-html-element": "github:justingeeslin/packed-patterns-and-stock-html-element",
+    "packed-patterns-and-stock-html-element": "github:justingeeslin/packed-patterns-and-stock-html-element#develop",
     "photo-uploader-to-contour-svg-html-element": "github:justingeeslin/photo-uploader-to-contour-svg-html-element"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1"
   }
 }
