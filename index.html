@@ -258,13 +258,6 @@
 
               <rect class="board-background" x="0" y="0" width="1200" height="750"></rect>
               <rect class="board-grid" x="0" y="0" width="1200" height="750" fill="url(#major-grid)"></rect>
-
-              <polygon
-                id="stock-shirt"
-                role="stock"
-                points="561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00"
-                transform="translate(68 74)"
-              ></polygon>
             </svg>
           </div>
         </pattern-pack-board>
@@ -281,6 +274,8 @@
 
       const SVG_NS = "http://www.w3.org/2000/svg";
       const PRINT_STROKE_COLOR = "#000000";
+      const T_SHIRT_STOCK_POINTS =
+        "561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00";
       const SVG_PRESENTATION_PROPERTIES = [
         "color",
         "fill",
@@ -319,6 +314,8 @@
           .querySelectorAll("piece-quantity-control")
           .forEach((control) => control.remove());
 
+        palette.controlsEl.appendChild(createTShirtStockControl());
+
         palette.addEventListener("svg-uploaded", (event) => {
           const control = event.detail.control;
           configureStockControl(control);
@@ -328,6 +325,48 @@
         palette.addEventListener("svg-upload-error", (event) => {
           console.warn("Stock upload failed", event.detail.failures);
         });
+      }
+
+      function createTShirtStockControl() {
+        const control = document.createElement("piece-quantity-control");
+
+        control.id = "stock-shirt-control";
+        control.setAttribute("board", "board");
+        control.setAttribute("piece-kind", "stock-shirt");
+        control.setAttribute("label", "T-Shirt");
+        control.setAttribute("value", "0");
+        control.innerHTML = `
+          <svg
+            slot="preview"
+            viewBox="0 0 561 570"
+            width="48"
+            height="48"
+            preserveAspectRatio="xMidYMid meet"
+            aria-hidden="true"
+          >
+            <polygon
+              points="${T_SHIRT_STOCK_POINTS}"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="14"
+              vector-effect="non-scaling-stroke">
+            </polygon>
+          </svg>
+
+          <template slot="shape">
+            <svg viewBox="0 0 561 570" xmlns="${SVG_NS}">
+              <g data-draggable="true" role="stock" pointer-events="all">
+                <polygon
+                  points="${T_SHIRT_STOCK_POINTS}"
+                  fill="transparent"
+                  stroke-width="3">
+                </polygon>
+              </g>
+            </svg>
+          </template>
+        `;
+
+        return control;
       }
 
       function configureStockControl(control) {
