@@ -77,14 +77,47 @@
         padding: 16px;
       }
 
-      .panel-title,
-      .board-title {
+      .panel-title {
         margin: 0 0 12px;
         color: var(--text-muted);
         font-size: 0.8rem;
         font-weight: 700;
         letter-spacing: 0;
         text-transform: uppercase;
+      }
+
+      .board-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .board-title {
+        margin: 0;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .download-button {
+        appearance: none;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface-muted);
+        color: var(--text);
+        cursor: pointer;
+        font: inherit;
+        font-size: 0.9rem;
+        font-weight: 650;
+        line-height: 1;
+        padding: 0.65rem 0.9rem;
+      }
+
+      .download-button:hover {
+        border-color: var(--focus);
       }
 
       .board-panel {
@@ -176,7 +209,16 @@
       </aside>
 
       <section class="board-panel" aria-labelledby="board-title">
-        <h2 class="board-title" id="board-title">Packboard</h2>
+        <div class="board-header">
+          <h2 class="board-title" id="board-title">Packboard</h2>
+          <button
+            class="download-button"
+            id="download-board-svg"
+            type="button"
+          >
+            Download SVG
+          </button>
+        </div>
         <pattern-pack-board>
           <svg
             id="board"
@@ -196,7 +238,7 @@
             </defs>
 
             <rect class="board-background" x="0" y="0" width="1200" height="750"></rect>
-            <rect x="0" y="0" width="1200" height="750" fill="url(#major-grid)"></rect>
+            <rect class="board-grid" x="0" y="0" width="1200" height="750" fill="url(#major-grid)"></rect>
 
             <polygon
               id="stock-shirt"
@@ -215,6 +257,26 @@
 
       const patternPalette = document.getElementById("pattern-palette");
       const stockPalette = document.getElementById("stock-palette");
+      const downloadBoardSvgButton = document.getElementById("download-board-svg");
+
+      const SVG_NS = "http://www.w3.org/2000/svg";
+      const PRINT_STROKE_COLOR = "#000000";
+      const SVG_PRESENTATION_PROPERTIES = [
+        "color",
+        "fill",
+        "fill-opacity",
+        "opacity",
+        "paint-order",
+        "stroke",
+        "stroke-dasharray",
+        "stroke-dashoffset",
+        "stroke-linecap",
+        "stroke-linejoin",
+        "stroke-miterlimit",
+        "stroke-opacity",
+        "stroke-width",
+        "vector-effect",
+      ];
 
       patternPalette.addEventListener("svg-uploaded", (event) => {
         console.log("Uploaded SVG added as", event.detail.controlId);
@@ -225,6 +287,7 @@
       });
 
       configureStockPalette(stockPalette);
+      downloadBoardSvgButton.addEventListener("click", downloadCurrentBoardSvg);
 
       function configureStockPalette(palette) {
         const title = palette.shadowRoot.querySelector("h1");
@@ -282,6 +345,122 @@
               element.setAttribute("data-role", role);
             }
           });
+      }
+
+      function downloadCurrentBoardSvg() {
+        const boardSvg = document.getElementById("board");
+
+        if (!(boardSvg instanceof SVGSVGElement)) {
+          console.warn("Cannot download packboard SVG because #board is missing.");
+          return;
+        }
+
+        const svgText = serializeSvgForDownload(boardSvg);
+        const blob = new Blob([svgText], { type: "image/svg+xml;charset=utf-8" });
+        const downloadUrl = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+
+        link.href = downloadUrl;
+        link.download = `packboard-${formatDateForFileName(new Date())}.svg`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+        setTimeout(() => URL.revokeObjectURL(downloadUrl), 0);
+      }
+
+      function serializeSvgForDownload(sourceSvg) {
+        const clonedSvg = sourceSvg.cloneNode(true);
+
+        clonedSvg.setAttribute("xmlns", SVG_NS);
+        clonedSvg.setAttribute("version", "1.1");
+        setStandaloneSvgSize(clonedSvg);
+        inlineComputedSvgStyles(sourceSvg, clonedSvg);
+        prepareSvgForPrintImport(clonedSvg);
+
+        return `<?xml version="1.0" encoding="UTF-8"?>\n${new XMLSerializer().serializeToString(clonedSvg)}\n`;
+      }
+
+      function prepareSvgForPrintImport(svg) {
+        svg
+          .querySelectorAll(
+            "#minor-grid, #major-grid, .grid-minor, .grid-major, .board-grid, .board-background",
+          )
+          .forEach((element) => element.remove());
+
+        svg.style.removeProperty("background");
+        svg.style.removeProperty("background-color");
+        svg.style.removeProperty("border");
+        svg.style.removeProperty("border-radius");
+        svg.style.removeProperty("touch-action");
+
+        svg
+          .querySelectorAll("path, polygon, polyline, line, rect, circle, ellipse")
+          .forEach((element) => {
+            if (element.closest("defs")) {
+              return;
+            }
+
+            const stroke = element.getAttribute("stroke") || element.style.stroke;
+
+            if (stroke && stroke !== "none") {
+              element.setAttribute("stroke", PRINT_STROKE_COLOR);
+              element.style.setProperty("stroke", PRINT_STROKE_COLOR);
+            }
+
+            const fill = element.getAttribute("fill") || element.style.fill;
+
+            if (fill === "transparent" || fill === "rgba(0, 0, 0, 0)") {
+              element.setAttribute("fill", "none");
+              element.style.setProperty("fill", "none");
+            }
+          });
+      }
+
+      function setStandaloneSvgSize(svg) {
+        const viewBox = svg.getAttribute("viewBox");
+        if (!viewBox) return;
+
+        const dimensions = viewBox.trim().split(/[\s,]+/).map(Number);
+        if (dimensions.length < 4) return;
+
+        const width = dimensions[2];
+        const height = dimensions[3];
+
+        if (!svg.hasAttribute("width") && Number.isFinite(width) && width > 0) {
+          svg.setAttribute("width", String(width));
+        }
+
+        if (!svg.hasAttribute("height") && Number.isFinite(height) && height > 0) {
+          svg.setAttribute("height", String(height));
+        }
+      }
+
+      function inlineComputedSvgStyles(sourceRoot, cloneRoot) {
+        const sourceElements = [sourceRoot, ...sourceRoot.querySelectorAll("*")];
+        const clonedElements = [cloneRoot, ...cloneRoot.querySelectorAll("*")];
+
+        sourceElements.forEach((sourceElement, index) => {
+          const clonedElement = clonedElements[index];
+
+          if (!(sourceElement instanceof SVGElement) || !(clonedElement instanceof SVGElement)) {
+            return;
+          }
+
+          const computedStyle = getComputedStyle(sourceElement);
+
+          SVG_PRESENTATION_PROPERTIES.forEach((property) => {
+            const value = computedStyle.getPropertyValue(property);
+
+            if (value) {
+              clonedElement.style.setProperty(property, value);
+            }
+          });
+        });
+      }
+
+      function formatDateForFileName(date) {
+        return date.toISOString().replace(/[:.]/g, "-");
       }
     </script>
   </body>
