@@ -242,6 +242,44 @@ test("expands and scrolls the packboard for many large stock pieces", async ({
   expect(metrics.backgroundWidth).toBe(metrics.svgWidth);
 });
 
+test("shows a helpful pack failure message for too many pieces", async ({
+  page,
+}) => {
+  await openApp(page);
+
+  await page.route("**/pack-error", async (route) => {
+    await route.fulfill({
+      status: 413,
+      contentType: "application/json",
+      body: JSON.stringify({
+        error: "The pack request has too many pieces.",
+      }),
+    });
+  });
+
+  await page
+    .locator("pattern-pack-board")
+    .evaluate((board) => board.setAttribute("endpoint", "/pack-error"));
+  await setQuantity(page, "triangle-control", 51);
+
+  await expect(
+    page.locator(
+      '#board [data-owner-control="triangle-control"][data-piece-kind="triangle"]',
+    ),
+  ).toHaveCount(51);
+
+  await page.locator("pattern-pack-board button#syncBtn").click();
+
+  const failure = page.locator("pattern-pack-board .pack-failure");
+  await expect(failure).toBeVisible();
+  await expect(failure).toContainText("Too many pieces");
+  await expect(failure).toContainText("51 pattern pieces");
+  await expect(failure).toContainText("50 or fewer");
+  await expect(failure).toContainText("split the layout into smaller batches");
+  await expect(failure).toContainText("HTTP 413");
+  await expect(failure).toContainText("The pack request has too many pieces.");
+});
+
 test("downloads the current packboard SVG", async ({ page }) => {
   await openApp(page);
   await setQuantity(page, "rect-control", 1);
