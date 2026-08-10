@@ -15,7 +15,7 @@
     "test:ui:preview": "BASE_URL=https://phpstack-1496460-6260926.cloudwaysapps.com/ playwright test"
   },
   "dependencies": {
-    "packed-patterns-and-stock-html-element": "github:justingeeslin/packed-patterns-and-stock-html-element#feature/editability-post-pack",
+    "packed-patterns-and-stock-html-element": "github:justingeeslin/packed-patterns-and-stock-html-element#develop",
     "photo-uploader-to-contour-svg-html-element": "github:justingeeslin/photo-uploader-to-contour-svg-html-element"
   },
   "devDependencies": {
