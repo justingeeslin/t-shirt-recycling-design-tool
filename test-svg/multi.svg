@@ -1,0 +1,82 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 800 500"
+  width="800"
+  height="500"
+>
+
+  <!-- Circle -->
+  <circle
+	cx="120"
+	cy="120"
+	r="60"
+	fill="skyblue"
+	stroke="black"
+	stroke-width="4"
+  />
+
+  <!-- Rectangle -->
+  <rect
+	x="230"
+	y="60"
+	width="140"
+	height="120"
+	fill="salmon"
+	stroke="black"
+	stroke-width="4"
+  />
+
+  <!-- Rounded rectangle -->
+  <rect
+	x="430"
+	y="60"
+	width="170"
+	height="120"
+	rx="25"
+	fill="lightgreen"
+	stroke="black"
+	stroke-width="4"
+  />
+
+  <!-- Ellipse -->
+  <ellipse
+	cx="700"
+	cy="120"
+	rx="70"
+	ry="45"
+	fill="gold"
+	stroke="black"
+	stroke-width="4"
+  />
+
+  <!-- Triangle -->
+  <polygon
+	points="80,380 160,240 240,380"
+	fill="plum"
+	stroke="black"
+	stroke-width="4"
+  />
+
+  <!-- Pentagon -->
+  <polygon
+	points="350,240 420,290 395,380 305,380 280,290"
+	fill="orange"
+	stroke="black"
+	stroke-width="4"
+  />
+
+  <!-- Line -->
+  <line
+	x1="500"
+	y1="260"
+	x2="700"
+	y2="380"
+	stroke="black"
+	stroke-width="8"
+	stroke-linecap="round"
+  />
+
+  <!-- Small circles at line endpoints -->
+  <circle cx="500" cy="260" r="12" fill="red" />
+  <circle cx="700" cy="380" r="12" fill="red" />
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="37.5px"
+     height="71.5px"
+     viewBox="0 0 305 573">
+  <polygon
+    id="left-sleeve"
+    points="256,0 14,344 0,398 246,573 305,526"
+    fill="none"
+    stroke="#0091EA"
+    stroke-width="12"/>
+</svg>

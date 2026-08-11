@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 14521.846 12930.209"
+   width="14521.847"
+   height="12930.209"
+   version="1.1"
+   id="svg9759"
+   sodipodi:docname="32005 t-shirt dress graded production pattern_revised no-seam base-size-only.dxf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9761"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false" />
+  <desc
+     id="desc9173">32005 t-shirt dress graded production pattern_revised no-seam base-size-only.dxf - scale = 25.400000, origin = (0.000000, 0.000000), method = file</desc>
+  <defs
+     id="defs9185" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="1"
+     id="g9757"
+     transform="translate(16671.883,12829.524)">
+    <path
+       style="fill:none;stroke:#000000"
+       d="M -11017.5,-7333.57 V -8500.2"
+       id="path9189" />
+    <text
+       x="-11095.913"
+       y="-7244.4595"
+       style="font-size:101.883px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-11095.913,-7244.4596)"
+       id="text9193"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9191"
+         x="-11095.913"
+         y="-7244.4595">Size: XS</tspan></text>
+    <text
+       x="-11207.984"
+       y="-7244.4595"
+       style="font-size:101.883px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-11207.985,-7244.4596)"
+       id="text9197"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9195"
+         x="-11207.984"
+         y="-7244.4595">Piece Name: Back Bodice</tspan></text>
+    <text
+       x="-10983.842"
+       y="-7244.4595"
+       style="font-size:101.883px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-10983.842,-7244.4596)"
+       id="text9201"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9199"
+         x="-10983.842"
+         y="-7244.4595">Sample Size</tspan></text>
+    <text
+       x="-10871.771"
+       y="-7244.4595"
+       style="font-size:101.883px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-10871.771,-7244.4596)"
+       id="text9205"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9203"
+         x="-10871.771"
+         y="-7244.4595">Quantity: 1</tspan></text>
+    <text
+       x="-10759.699"
+       y="-7244.4595"
+       style="font-size:101.883px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-10759.699,-7244.4596)"
+       id="text9209"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9207"
+         x="-10759.699"
+         y="-7244.4595">Material: MATERIAL</tspan></text>
+    <text
+       x="-10647.628"
+       y="-7244.4595"
+       style="font-size:101.883px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-10647.628,-7244.4596)"
+       id="text9213"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9211"
+         x="-10647.628"
+         y="-7244.4595">Area: 0.0535 sq.m</tspan></text>
+    <path
+       d="m -12869.516,-7221.2512 -0.128,-599.6448 129.188,-8.2668 42.957,-6.0462 34.733,-7.3728 33.078,-11.9084 27.615,-16.411 25.093,-20.4535 27.197,-27.6334 24.673,-29.7959 17.678,-24.0033 20.633,-32.4238 18.029,-33.9956 15.327,-35.3006 21.75,-70.5546 7.239,-36.2102 8.03,-77.6414 0.756,-39.047 -4.346,-83.2309 -4.721,-41.4063 -15.685,-93.6779 -33.168,-138.729 -12.787,-45.8268 -66.253,-213.6622 -56.972,-169.5245 748.977,-212.2816 78.747,114.2837 28.007,36.9154 46.421,54.0126 25.586,24.6254 29.115,23.4982 63.655,39.8737 33.693,16.7738 73.51,29.6852 75.643,23.5151 127.851,29.2095 129.922,17.2356 142.322,6.925 38.071,-0.98 80.161,-3.9225 87.071,-9.8169 129.036,-25.7248 42.41,-11.2077 75.879,-23.7676 73.755,-29.8438 66.519,-35.7092 31.178,-21.1248 29.218,-23.5787 49.58,-51.2079 22.609,-27.7 81.128,-113.1244 25.779,-38.5534 748.9409,212.6503 -97.8552,297.3199 -25.5159,85.8143 -36.0284,138.0762 -18.6411,93.1692 -7.0783,46.9658 -7.8579,82.9668 -1.2566,41.6668 3.5763,77.9928 5.1658,38.6982 16.8431,71.8713 12.1062,34.9031 15.3141,35.306 18.0166,34.0019 20.6214,32.431 17.6687,24.0096 24.6625,29.8042 27.187,27.6427 25.0851,20.4622 27.6091,16.4206 33.0725,11.92 34.7301,7.3851 85.9872,10.0092 86.1706,4.3674 -0.4872,599.6481 -1863.4146,0.2709 z"
+       style="fill:none;stroke:#000000"
+       id="path9215" />
+    <path
+       d="m -11029.116,-7310.4554 -1750.198,-0.9668 -0.09,-426.4446 78.856,-5.6791 38.264,-5.6675 36.866,-9.0609 35.003,-13.5857 38.307,-22.6986 35.223,-28.7289 32.278,-32.9638 29.472,-35.4036 24.284,-32.9743 24.926,-39.5044 21.23,-40.6028 17.702,-41.6511 14.342,-42.6497 11.15,-43.5982 8.126,-44.4968 7.852,-91.49 -2.227,-94.4853 -10.964,-97.0815 -18.355,-99.2781 -38.453,-152.1623 -64.598,-206.8437 -34.987,-104.2206 597.628,-169.385 73.209,103.6879 54.123,63.2098 29.852,28.4993 33.239,26.7613 35.476,24.1159 76.391,41.0826 81.522,32.8623 84.111,26.2164 134.918,30.8633 90.453,13.3981 45.479,4.5399 151.537,7.3733 42.462,-1.106 87.058,-4.2473 91.138,-10.2119 90.434,-16.5024 90.078,-22.4099 84.323,-26.4828 81.751,-33.019 76.612,-41.1938 35.578,-24.1745 33.33,-26.8328 29.931,-28.5863 54.25,-63.4291 73.36,-104.0818 597.5359,169.6611 -84.6287,259.6475 -42.0402,153.1955 -21.5859,100.2189 -14.8651,98.2243 -6.8001,95.8309 2.6092,93.0385 5.253,45.3475 8.1095,44.4997 11.1338,43.6022 14.3262,42.6548 17.6866,41.6575 21.2151,40.6104 24.9115,39.5134 24.2725,32.9831 29.4591,35.4137 32.266,32.975 35.2125,28.7411 38.2983,22.712 34.9977,13.5979 36.8624,9.0741 77.4546,9.1003 39.6596,2.2883 -0.3464,426.4453 z"
+       style="fill:none;stroke:#000000"
+       id="path9217" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -12523.8,-7950.49 53,41.37"
+       id="path9219" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -12485.6,-7890.2 29.5,-37.83"
+       id="path9221" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -12505,-7976.3 55.3,38.11"
+       id="path9223" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -12463.3,-7918.42 27.2,-39.53"
+       id="path9225" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -11004,-8879.8 -2.2,67.17"
+       id="path9227" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -11030.2,-8813.4 48,1.54"
+       id="path9229" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -10968.1,-8880.73 2,67.17"
+       id="path9231" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -10990.1,-8812.85 48,-1.41"
+       id="path9233" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -9529.82,-7975.69 -55.36,38.09"
+       id="path9235" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -9598.79,-7957.37 27.22,39.55"
+       id="path9237" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -9508.42,-7946.47 -53.01,41.31"
+       id="path9239" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -9576.18,-7924.1 29.5,37.87"
+       id="path9241" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -12455.1,-7891.65 52.9,41.34"
+       id="path9243" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -12416.9,-7831.39 29.5,-37.84"
+       id="path9245" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -12430.9,-7924.63 55.4,38.13"
+       id="path9247" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -12389.1,-7866.74 27.2,-39.52"
+       id="path9249" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -11007.2,-8789.47 -2.1,67.17"
+       id="path9251" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -11033.3,-8723.05 48,1.5"
+       id="path9253" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -10964.7,-8790.57 2,67.17"
+       id="path9255" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -10986.7,-8722.69 48,-1.43"
+       id="path9257" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -9604,-7924.04 -55.35,38.1"
+       id="path9259" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -9672.96,-7905.7 27.22,39.53"
+       id="path9261" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -9579.73,-7891.06 -52.99,41.32"
+       id="path9263" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -9647.48,-7868.66 29.52,37.85"
+       id="path9265" />
+    <text
+       x="-11784.938"
+       y="-7397.665"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9269"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9267"
+         x="-11784.938"
+         y="-7397.665">32005 Size 10</tspan></text>
+    <text
+       x="-11784.938"
+       y="-7301.665"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9273"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9271"
+         x="-11784.938"
+         y="-7301.665">10/22/23</tspan></text>
+    <text
+       x="-11784.938"
+       y="-7205.665"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9277"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9275"
+         x="-11784.938"
+         y="-7205.665">Cut 1</tspan></text>
+    <text
+       x="-11784.938"
+       y="-7109.665"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9281"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9279"
+         x="-11784.938"
+         y="-7109.665">M. Christianson</tspan></text>
+    <path
+       style="fill:none;stroke:#000000"
+       d="M -12160,-4923.03 V -5934.47"
+       id="path9283" />
+    <text
+       x="-12209.33"
+       y="-4986.7471"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12209.33,-4986.7471)"
+       id="text9287"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9285"
+         x="-12209.33"
+         y="-4986.7471">Size: XS</tspan></text>
+    <text
+       x="-12279.794"
+       y="-4986.7471"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12279.793,-4986.7471)"
+       id="text9291"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9289"
+         x="-12279.794"
+         y="-4986.7471">Piece Name: Skirt tier 1</tspan></text>
+    <text
+       x="-12138.865"
+       y="-4986.7471"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12138.866,-4986.7471)"
+       id="text9295"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9293"
+         x="-12138.865"
+         y="-4986.7471">Sample Size</tspan></text>
+    <text
+       x="-12068.401"
+       y="-4986.7471"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12068.402,-4986.7471)"
+       id="text9299"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9297"
+         x="-12068.401"
+         y="-4986.7471">Quantity: 1</tspan></text>
+    <text
+       x="-11997.938"
+       y="-4986.7471"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-11997.938,-4986.7471)"
+       id="text9303"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9301"
+         x="-11997.938"
+         y="-4986.7471">Material: MATERIAL</tspan></text>
+    <text
+       x="-11927.474"
+       y="-4986.7471"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-11927.474,-4986.7471)"
+       id="text9307"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9305"
+         x="-11927.474"
+         y="-4986.7471">Area: 0.0616 sq.m</tspan></text>
+    <path
+       d="m -12759.428,-4622.1945 -0.243,-1744.5477 1906.264,5.7391 1903.628,1.5066 1.7597,1744.3564 z"
+       style="fill:none;stroke:#000000"
+       id="path9309" />
+    <path
+       d="m -12669.22,-4712.2485 -0.218,-1564.0009 1815.859,5.4668 1813.6701,1.4356 1.5776,1563.8188 z"
+       style="fill:none;stroke:#000000"
+       id="path9311" />
+    <text
+       x="-10439.46"
+       y="-5525.5244"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9315"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9313"
+         x="-10439.46"
+         y="-5525.5244">32005 Size 10</tspan></text>
+    <text
+       x="-10439.46"
+       y="-5429.5244"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9319"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9317"
+         x="-10439.46"
+         y="-5429.5244">10/22/23</tspan></text>
+    <text
+       x="-10439.46"
+       y="-5333.5244"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9323"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9321"
+         x="-10439.46"
+         y="-5333.5244">Cut 1</tspan></text>
+    <text
+       x="-10439.46"
+       y="-5237.5244"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9327"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9325"
+         x="-10439.46"
+         y="-5237.5244">M. Christianson</tspan></text>
+    <path
+       style="fill:none;stroke:#000000"
+       d="M -12241.6,-2801.84 V -3813.29"
+       id="path9329" />
+    <text
+       x="-12294.426"
+       y="-2833.9937"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12294.426,-2833.9936)"
+       id="text9333"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9331"
+         x="-12294.426"
+         y="-2833.9937">Size: XS</tspan></text>
+    <text
+       x="-12369.923"
+       y="-2833.9937"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12369.923,-2833.9936)"
+       id="text9337"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9335"
+         x="-12369.923"
+         y="-2833.9937">Piece Name: Skirt tier 2</tspan></text>
+    <text
+       x="-12218.929"
+       y="-2833.9937"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12218.929,-2833.9936)"
+       id="text9341"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9339"
+         x="-12218.929"
+         y="-2833.9937">Sample Size</tspan></text>
+    <text
+       x="-12143.432"
+       y="-2833.9937"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12143.431,-2833.9936)"
+       id="text9345"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9343"
+         x="-12143.432"
+         y="-2833.9937">Quantity: 1</tspan></text>
+    <text
+       x="-12067.935"
+       y="-2833.9937"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12067.934,-2833.9936)"
+       id="text9349"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9347"
+         x="-12067.935"
+         y="-2833.9937">Material: MATERIAL</tspan></text>
+    <text
+       x="-11992.438"
+       y="-2833.9937"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-11992.437,-2833.9936)"
+       id="text9353"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9351"
+         x="-11992.438"
+         y="-2833.9937">Area: 0.0616 sq.m</tspan></text>
+    <path
+       d="m -12840.568,-2613.4507 v -1745.9048 l 1905.957,-2.0588 1903.6948,-2.5945 1.9999,1744.2332 z"
+       style="fill:none;stroke:#000000"
+       id="path9355" />
+    <path
+       d="m -12750.347,-2703.8214 v -1565.4107 l 1815.847,-1.9615 1813.4666,-2.4715 1.7929,1563.8185 z"
+       style="fill:none;stroke:#000000"
+       id="path9357" />
+    <text
+       x="-10307.271"
+       y="-3365.8677"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9361"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9359"
+         x="-10307.271"
+         y="-3365.8677">32005 Size 10</tspan></text>
+    <text
+       x="-10307.271"
+       y="-3269.8677"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9365"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9363"
+         x="-10307.271"
+         y="-3269.8677">10/22/23</tspan></text>
+    <text
+       x="-10307.271"
+       y="-3173.8677"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9369"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9367"
+         x="-10307.271"
+         y="-3173.8677">Cut 1</tspan></text>
+    <text
+       x="-10307.271"
+       y="-3077.8677"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9373"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9371"
+         x="-10307.271"
+         y="-3077.8677">M. Christianson</tspan></text>
+    <path
+       style="fill:none;stroke:#000000"
+       d="M -12246.3,-205.363 V -1489.04"
+       id="path9375" />
+    <text
+       x="-12308.936"
+       y="-286.23499"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12308.936,-286.23499)"
+       id="text9379"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9377"
+         x="-12308.936"
+         y="-286.23499">Size: XS</tspan></text>
+    <text
+       x="-12398.365"
+       y="-286.23499"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12398.365,-286.23498)"
+       id="text9383"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9381"
+         x="-12398.365"
+         y="-286.23499">Piece Name: Skirt tier 3</tspan></text>
+    <text
+       x="-12219.507"
+       y="-286.23499"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12219.507,-286.23499)"
+       id="text9387"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9385"
+         x="-12219.507"
+         y="-286.23499">Sample Size</tspan></text>
+    <text
+       x="-12130.077"
+       y="-286.23499"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12130.077,-286.235)"
+       id="text9391"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9389"
+         x="-12130.077"
+         y="-286.23499">Quantity: 1</tspan></text>
+    <text
+       x="-12040.648"
+       y="-286.23499"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-12040.648,-286.235)"
+       id="text9395"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9393"
+         x="-12040.648"
+         y="-286.23499">Material: MATERIAL</tspan></text>
+    <text
+       x="-11951.219"
+       y="-286.23502"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-11951.219,-286.235)"
+       id="text9399"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9397"
+         x="-11951.219"
+         y="-286.23502">Area: 0.0794 sq.m</tspan></text>
+    <path
+       d="M -12818.605,100.18395 V -2220.3727 l 1876.767,-0.5587 1874.4231,-1.8956 2.052,2322.38808 z"
+       style="fill:none;stroke:#000000"
+       id="path9401" />
+    <path
+       d="M -12757.645,-143.66617 V -2159.4309 l 1815.847,-0.5405 1813.477,-1.834 1.7827,2017.53663 z"
+       style="fill:none;stroke:#000000"
+       id="path9403" />
+    <text
+       x="-10362.547"
+       y="-1163.0886"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9407"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9405"
+         x="-10362.547"
+         y="-1163.0886">32005 Size 10</tspan></text>
+    <text
+       x="-10362.547"
+       y="-1067.0886"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9411"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9409"
+         x="-10362.547"
+         y="-1067.0886">10/22/23</tspan></text>
+    <text
+       x="-10362.547"
+       y="-971.08862"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9415"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9413"
+         x="-10362.547"
+         y="-971.08862">Cut 1</tspan></text>
+    <text
+       x="-10362.547"
+       y="-875.08862"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9419"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9417"
+         x="-10362.547"
+         y="-875.08862">M. Christianson</tspan></text>
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -10365.8,-10747.1 11.1,-837.5"
+       id="path9421" />
+    <text
+       x="-10433.583"
+       y="-10579.055"
+       style="font-size:85.17px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-89.244515,-10433.583,-10579.054)"
+       id="text9425"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9423"
+         x="-10433.583"
+         y="-10579.055">Size: XS</tspan></text>
+    <text
+       x="-10527.262"
+       y="-10580.29"
+       style="font-size:85.17px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-89.244515,-10527.262,-10580.29)"
+       id="text9429"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9427"
+         x="-10527.262"
+         y="-10580.29">Piece Name: Front Bodice</tspan></text>
+    <text
+       x="-10339.905"
+       y="-10577.819"
+       style="font-size:85.17px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-89.244515,-10339.905,-10577.819)"
+       id="text9433"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9431"
+         x="-10339.905"
+         y="-10577.819">Sample Size</tspan></text>
+    <text
+       x="-10246.227"
+       y="-10576.584"
+       style="font-size:85.17px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-89.244515,-10246.227,-10576.584)"
+       id="text9437"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9435"
+         x="-10246.227"
+         y="-10576.584">Quantity: 1</tspan></text>
+    <text
+       x="-10152.548"
+       y="-10575.349"
+       style="font-size:85.17px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-89.244515,-10152.548,-10575.348)"
+       id="text9441"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9439"
+         x="-10152.548"
+         y="-10575.349">Material: MATERIAL</tspan></text>
+    <text
+       x="-10058.87"
+       y="-10574.113"
+       style="font-size:85.17px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-89.244515,-10058.87,-10574.113)"
+       id="text9445"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9443"
+         x="-10058.87"
+         y="-10574.113">Area: 0.0481 sq.m</tspan></text>
+    <path
+       d="m -12260.253,-10740.315 1.053,-603.892 90.234,2.629 44.492,-1.809 43.743,-5.557 42.743,-10.555 33.532,-13.001 31.544,-17.373 30.619,-23.609 27.043,-27.75 21.73,-28.151 18.792,-30.183 15.87,-31.8 13.714,-35.054 19.152,-72.807 11.14,-81.71 2.588,-41.157 -0.946,-128.381 -11.617,-138.842 -27.441,-183.84 -44.811,-220.806 -40.257,-175.685 773.55,-219.243 30.828,182.19 30.44,135.473 23.717,79.373 30.653,76.639 18.771,36.651 42.662,65.452 50.594,59.8 59.3,55.953 64.793,49.415 69.244,42.711 73.325,35.313 75.699,26.603 78.131,17.507 80.65,8.48 81.297,3.284 121.747,-6.516 40.206,-5.204 78.136,-17.486 75.707,-26.582 73.3365,-35.292 69.2563,-42.692 64.807,-49.397 59.3163,-55.938 50.6105,-59.787 42.6804,-65.44 35.154,-74.492 26.8689,-78.257 11.1716,-39.898 30.4786,-135.467 30.8784,-182.187 773.4699,219.499 -68.3561,307.899 -16.8179,88.564 -27.4897,183.832 -11.6543,138.838 -0.9804,128.381 7.0294,82.156 6.6655,40.715 19.1322,72.812 13.7051,35.057 15.8613,31.804 18.7844,30.188 21.7227,28.156 27.0348,27.757 30.6119,23.617 31.5395,17.38 33.5278,13.009 42.7427,10.567 43.7436,5.569 89.4891,1.141 45.2451,-1.929 0.7974,603.893 -1917.8815,-3.666 -982.755,1.623 z"
+       style="fill:none;stroke:#000000"
+       id="path9447" />
+    <path
+       d="m -10365.393,-10833.663 -982.916,1.622 -821.565,1.356 0.748,-429.313 78.163,0.147 38.384,-3.347 37.548,-7.452 38.24,-13.366 36.536,-18.639 34.357,-23.135 31.706,-26.855 28.584,-29.798 27.059,-34.857 23.101,-37.151 19.411,-39.19 15.99,-40.977 12.837,-42.509 17.293,-88.597 7.911,-91.677 0.677,-92.725 -1.701,-46.121 -11.983,-144.821 -20.073,-140.783 -35.535,-183.331 -40.764,-180.72 597.627,-169.383 33.562,183.854 22.581,89.195 29.539,85.915 18.104,41.386 20.714,40.156 23.038,38.046 53.65,71.866 62.442,65.75 69.665,59.059 37.052,26.84 77.688,47.88 81.752,39.377 85.01,29.927 87.46,19.529 88.498,9.256 89.309,3.659 133.712,-7.202 44.099,-5.665 87.467,-19.505 85.019,-29.902 81.7643,-39.355 77.7018,-47.858 72.7053,-55.478 66.2674,-62.459 58.2613,-68.865 25.6382,-36.654 23.0487,-38.041 20.725,-40.151 33.9121,-83.857 25.7942,-87.685 28.5441,-136.313 15.6469,-92.471 597.5632,169.579 -59.5854,271.881 -31.0086,185.607 -14.9637,143.349 -2.9725,48.789 -2.1566,92.487 4.0005,92.456 12.3087,90.395 9.9423,43.789 12.8261,42.512 15.9788,40.981 19.4005,39.196 23.091,37.157 27.0506,34.864 28.5751,29.805 31.6993,26.863 34.3508,23.143 36.5301,18.648 38.237,13.376 37.5451,7.461 77.3242,3.977 39.2205,-0.748 0.5669,429.313 z"
+       style="fill:none;stroke:#000000"
+       id="path9449" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -11915.3,-11441.2 50.9,43.9"
+       id="path9451" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -11880.1,-11379.1 31.4,-36.3"
+       id="path9453" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -10353.7,-11954 v 67.2"
+       id="path9455" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -10377.7,-11886.9 48,0.1"
+       id="path9457" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -8792.26,-11440.8 -50.82,44"
+       id="path9459" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -8858.78,-11415 31.41,36.3"
+       id="path9461" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -11845.6,-11382.4 50.8,44"
+       id="path9463" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -11810.5,-11320.3 31.4,-36.3"
+       id="path9465" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -10353.7,-11863.6 v 67.2"
+       id="path9467" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -10377.7,-11796.4 h 48"
+       id="path9469" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -8861.91,-11382 -50.81,44"
+       id="path9471" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -8928.43,-11356.2 31.42,36.3"
+       id="path9473" />
+    <text
+       x="-12112.781"
+       y="-10941.296"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9477"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9475"
+         x="-12112.781"
+         y="-10941.296">32005 Size 10</tspan></text>
+    <text
+       x="-12112.781"
+       y="-10845.296"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9481"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9479"
+         x="-12112.781"
+         y="-10845.296">10/22/23</tspan></text>
+    <text
+       x="-12112.781"
+       y="-10749.296"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9485"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9483"
+         x="-12112.781"
+         y="-10749.296">Cut 1</tspan></text>
+    <text
+       x="-12112.781"
+       y="-10653.296"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9489"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9487"
+         x="-12112.781"
+         y="-10653.296">M. Christianson</tspan></text>
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -14904.6,-8232.59 h -1569"
+       id="path9491" />
+    <text
+       x="-15289.074"
+       y="-8234.9482"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(180,-15289.074,-8234.9485)"
+       id="text9495"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9493"
+         x="-15289.074"
+         y="-8234.9482">Size: XS</tspan></text>
+    <text
+       x="-15289.074"
+       y="-8161.0283"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(180,-15289.074,-8161.0285)"
+       id="text9499"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9497"
+         x="-15289.074"
+         y="-8161.0283">Piece Name: Sleeve</tspan></text>
+    <text
+       x="-15289.074"
+       y="-8308.8682"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(180,-15289.074,-8308.8685)"
+       id="text9503"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9501"
+         x="-15289.074"
+         y="-8308.8682">Sample Size</tspan></text>
+    <text
+       x="-15289.074"
+       y="-8382.7881"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(180,-15289.074,-8382.7885)"
+       id="text9507"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9505"
+         x="-15289.074"
+         y="-8382.7881">Quantity: 2</tspan></text>
+    <text
+       x="-15289.074"
+       y="-8456.709"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(180,-15289.074,-8456.7085)"
+       id="text9511"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9509"
+         x="-15289.074"
+         y="-8456.709">Material: MATERIAL</tspan></text>
+    <text
+       x="-15289.074"
+       y="-8530.6289"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(180,-15289.074,-8530.6285)"
+       id="text9515"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9513"
+         x="-15289.074"
+         y="-8530.6289">Area: 0.023 sq.m</tspan></text>
+    <path
+       d="m -15906.343,-9607.1066 742.057,233.1027 27.731,2020.3929 -730.311,400.6497 -38.722,-136.3574 -31.009,-89.5413 -30.765,-69.8138 -18.517,-33.1754 -21.275,-31.3612 -16.141,-20.0444 -57.007,-57.8172 -63.215,-51.5539 -32.883,-24.2398 -142.1,-101.5483 -34.428,-26.7638 -60.907,-52.8127 -56.73,-57.4161 -51.615,-61.955 -46.959,-68.8353 -20.6,-36.23 -33.971,-74.7793 -13.178,-38.8715 -16.775,-71.2166 -9.822,-72.6277 -7.898,-144.9695 3.991,-145.4427 7.753,-72.8946 14.649,-71.7039 26.526,-77.5163 16.966,-37.3414 40.947,-72.5063 23.349,-34.4998 50.177,-63.7846 55.566,-59.284 59.979,-54.7693 127.221,-98.4445 64.25,-48.3943 82.376,-70.1303 44.498,-48.4124 19.557,-26.3299 19.384,-31.4655 31.639,-67.1235 13.204,-34.8082 40.131,-129.8647 z"
+       style="fill:none;stroke:#000000"
+       id="path9517" />
+    <path
+       d="m -16610.481,-8275.7135 3.917,-139.0742 10.969,-90.4653 9.871,-44.0508 13.211,-42.2923 16.595,-41.2614 19.738,-40.1766 22.639,-39.0378 53.012,-74.443 61.71,-69.2398 68.474,-63.6045 113.259,-88.1776 111.57,-85.4264 66.949,-61.1765 29.785,-33.1507 26.675,-35.4343 23.627,-38.7116 20.434,-41.1223 33.417,-87.8697 39.482,-139.8403 456.823,143.5019 28.782,2096.9282 -451.12,247.4846 -41.29,-137.6063 -35.796,-86.9889 -22.239,-41.0014 -25.96,-38.8645 -23.24,-28.8604 -32.193,-34.393 -70.468,-61.8954 -231.138,-169.5404 -69.255,-61.0974 -63.313,-67.2427 -55.198,-72.8928 -23.878,-38.4103 -21.033,-39.6371 -17.919,-40.802 -14.532,-41.9048 -11.19,-43.7213 -13.529,-89.9611 z"
+       style="fill:none;stroke:#000000"
+       id="path9519" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -16004.9,-7310.21 53.9,-40.07"
+       id="path9521" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -15936.7,-7331.01 -28.6,-38.54"
+       id="path9523" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -16025.7,-7336.11 50.8,-43.92"
+       id="path9525" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -15959.2,-7361.87 -31.4,-36.32"
+       id="path9527" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -16033.6,-9256.35 55.6,37.73"
+       id="path9529" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -15991.4,-9198.76 26.9,-39.72"
+       id="path9531" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -15982.1,-9222.72 55.6,37.77"
+       id="path9533" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -15940,-9165.1 27,-39.7"
+       id="path9535" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -15955.9,-7346.82 53.9,-40.1"
+       id="path9537" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -15887.7,-7367.67 -28.7,-38.51"
+       id="path9539" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -15979.2,-7375.68 50.8,-43.96"
+       id="path9541" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -15912.7,-7401.49 -31.4,-36.3"
+       id="path9543" />
+    <text
+       x="-15291.354"
+       y="-8566.0625"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90.701711,-15291.354,-8566.0625)"
+       id="text9547"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9545"
+         x="-15291.354"
+         y="-8566.0625">32005 Size 10</tspan></text>
+    <text
+       x="-15195.361"
+       y="-8567.2383"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90.701711,-15195.362,-8567.2382)"
+       id="text9551"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9549"
+         x="-15195.361"
+         y="-8567.2383">10/22/23</tspan></text>
+    <text
+       x="-15099.369"
+       y="-8568.4141"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90.701711,-15099.369,-8568.4139)"
+       id="text9555"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9553"
+         x="-15099.369"
+         y="-8568.4141">Cut 1</tspan></text>
+    <text
+       x="-15003.376"
+       y="-8569.5898"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90.701711,-15003.376,-8569.5896)"
+       id="text9559"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9557"
+         x="-15003.376"
+         y="-8569.5898">M. Christianson</tspan></text>
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -6701.97,-9731.82 h 2724"
+       id="path9561" />
+    <text
+       x="-5763.3335"
+       y="-9746.6055"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9565"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9563"
+         x="-5763.3335"
+         y="-9746.6055">Size: XS</tspan></text>
+    <text
+       x="-5763.3335"
+       y="-9820.5254"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9569"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9567"
+         x="-5763.3335"
+         y="-9820.5254">Piece Name: Collarette</tspan></text>
+    <text
+       x="-5763.3335"
+       y="-9672.6855"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9573"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9571"
+         x="-5763.3335"
+         y="-9672.6855">Sample Size</tspan></text>
+    <text
+       x="-5763.3335"
+       y="-9598.7656"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9577"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9575"
+         x="-5763.3335"
+         y="-9598.7656">Quantity: 1</tspan></text>
+    <text
+       x="-5763.3335"
+       y="-9524.8457"
+       style="font-size:67.2px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9581"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9579"
+         x="-5763.3335"
+         y="-9524.8457">Area: 0.0117 sq.m</tspan></text>
+    <path
+       d="m -7579.4913,-9518.4577 v -426.7236 h 1454.9455 1226.2888 920.0043 52.9505 955.5264 v 426.5444 z"
+       style="fill:none;stroke:#000000"
+       id="path9583" />
+    <path
+       d="m -7488.0513,-9609.9012 v -243.8401 h 1363.5055 1226.2888 920.0043 52.9505 864.0864 v 243.668 z"
+       style="fill:none;stroke:#000000"
+       id="path9585" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -6124.55,-9945.18 v 67.2"
+       id="path9587" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -6148.55,-9877.98 h 48"
+       id="path9589" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -4898.26,-9945.18 v 67.2"
+       id="path9591" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -4922.26,-9877.98 h 48"
+       id="path9593" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -3978.25,-9945.18 v 67.2"
+       id="path9595" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -4002.25,-9877.98 h 48"
+       id="path9597" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -3925.3,-9945.18 v 67.2"
+       id="path9599" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -3949.3,-9877.98 h 48"
+       id="path9601" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -6124.55,-9853.74 v 67.2"
+       id="path9603" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -6148.55,-9786.54 h 48"
+       id="path9605" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -4898.26,-9853.74 v 67.2"
+       id="path9607" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -4922.26,-9786.54 h 48"
+       id="path9609" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -3978.25,-9853.74 v 67.2"
+       id="path9611" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -4002.25,-9786.54 h 48"
+       id="path9613" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -3925.3,-9853.74 v 67.2"
+       id="path9615" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="m -3949.3,-9786.54 h 48"
+       id="path9617" />
+    <path
+       style="fill:none;stroke:#000000"
+       d="M -5362.52,-5298.36 V -6309.81"
+       id="path9619" />
+    <text
+       x="-5411.8481"
+       y="-5342.8672"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5411.8481,-5342.8673)"
+       id="text9623"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9621"
+         x="-5411.8481"
+         y="-5342.8672">Size: XS</tspan></text>
+    <text
+       x="-5482.312"
+       y="-5342.8672"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5482.312,-5342.8673)"
+       id="text9627"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9625"
+         x="-5482.312"
+         y="-5342.8672">Piece Name: @Skirt tier 1</tspan></text>
+    <text
+       x="-5341.3843"
+       y="-5342.8672"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5341.3842,-5342.8673)"
+       id="text9631"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9629"
+         x="-5341.3843"
+         y="-5342.8672">Sample Size</tspan></text>
+    <text
+       x="-5270.9204"
+       y="-5342.8672"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5270.9204,-5342.8673)"
+       id="text9635"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9633"
+         x="-5270.9204"
+         y="-5342.8672">Quantity: 1</tspan></text>
+    <text
+       x="-5200.4565"
+       y="-5342.8672"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5200.4565,-5342.8673)"
+       id="text9639"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9637"
+         x="-5200.4565"
+         y="-5342.8672">Material: MATERIAL</tspan></text>
+    <text
+       x="-5129.9927"
+       y="-5342.8672"
+       style="font-size:64.058px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5129.9926,-5342.8673)"
+       id="text9643"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9641"
+         x="-5129.9927"
+         y="-5342.8672">Area: 0.0616 sq.m</tspan></text>
+    <path
+       d="m -5961.9462,-4997.5318 -0.2434,-1744.548 1906.2633,5.7383 1903.6289,1.5074 1.7598,1744.3564 z"
+       style="fill:none;stroke:#000000"
+       id="path9645" />
+    <path
+       d="m -5871.7379,-5087.5858 -0.2183,-1564.0012 1815.8584,5.4661 1813.6705,1.4362 1.5776,1563.8189 z"
+       style="fill:none;stroke:#000000"
+       id="path9647" />
+    <text
+       x="-3641.978"
+       y="-5900.8618"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9651"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9649"
+         x="-3641.978"
+         y="-5900.8618">32005 Size 10</tspan></text>
+    <text
+       x="-3641.978"
+       y="-5804.8618"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9655"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9653"
+         x="-3641.978"
+         y="-5804.8618">10/22/23</tspan></text>
+    <text
+       x="-3641.978"
+       y="-5708.8618"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9659"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9657"
+         x="-3641.978"
+         y="-5708.8618">Cut 1</tspan></text>
+    <text
+       x="-3641.978"
+       y="-5612.8618"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9663"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9661"
+         x="-3641.978"
+         y="-5612.8618">M. Christianson</tspan></text>
+    <path
+       style="fill:none;stroke:#000000"
+       d="M -5444.1,-3177.18 V -4188.63"
+       id="path9665" />
+    <text
+       x="-5496.9443"
+       y="-3188.7412"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5496.9441,-3188.7411)"
+       id="text9669"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9667"
+         x="-5496.9443"
+         y="-3188.7412">Size: XS</tspan></text>
+    <text
+       x="-5572.4409"
+       y="-3188.7412"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5572.4411,-3188.7411)"
+       id="text9673"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9671"
+         x="-5572.4409"
+         y="-3188.7412">Piece Name: @Skirt tier 2</tspan></text>
+    <text
+       x="-5421.4473"
+       y="-3188.7412"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5421.4471,-3188.7411)"
+       id="text9677"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9675"
+         x="-5421.4473"
+         y="-3188.7412">Sample Size</tspan></text>
+    <text
+       x="-5345.9502"
+       y="-3188.7412"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5345.95,-3188.7411)"
+       id="text9681"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9679"
+         x="-5345.9502"
+         y="-3188.7412">Quantity: 1</tspan></text>
+    <text
+       x="-5270.4531"
+       y="-3188.7412"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5270.453,-3188.7411)"
+       id="text9685"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9683"
+         x="-5270.4531"
+         y="-3188.7412">Material: MATERIAL</tspan></text>
+    <text
+       x="-5194.9561"
+       y="-3188.7412"
+       style="font-size:68.634px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5194.956,-3188.7411)"
+       id="text9689"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9687"
+         x="-5194.9561"
+         y="-3188.7412">Area: 0.0616 sq.m</tspan></text>
+    <path
+       d="m -6043.0862,-2988.7884 v -1745.9044 l 1905.9566,-2.0588 1903.6951,-2.5949 1.9998,1744.2336 z"
+       style="fill:none;stroke:#000000"
+       id="path9691" />
+    <path
+       d="m -5952.8654,-3079.159 v -1565.4104 l 1815.846,-1.9615 1813.4676,-2.4719 1.7929,1563.8189 z"
+       style="fill:none;stroke:#000000"
+       id="path9693" />
+    <text
+       x="-3509.7891"
+       y="-3741.2053"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9697"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9695"
+         x="-3509.7891"
+         y="-3741.2053">32005 Size 10</tspan></text>
+    <text
+       x="-3509.7891"
+       y="-3645.2053"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9701"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9699"
+         x="-3509.7891"
+         y="-3645.2053">10/22/23</tspan></text>
+    <text
+       x="-3509.7891"
+       y="-3549.2053"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9705"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9703"
+         x="-3509.7891"
+         y="-3549.2053">Cut 1</tspan></text>
+    <text
+       x="-3509.7891"
+       y="-3453.2053"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9709"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9707"
+         x="-3509.7891"
+         y="-3453.2053">M. Christianson</tspan></text>
+    <path
+       style="fill:none;stroke:#000000"
+       d="M -5448.85,-580.701 V -1864.38"
+       id="path9711" />
+    <text
+       x="-5511.4546"
+       y="-637.1828"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5511.4545,-637.18282)"
+       id="text9715"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9713"
+         x="-5511.4546"
+         y="-637.1828">Size: XS</tspan></text>
+    <text
+       x="-5600.8838"
+       y="-637.1828"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5600.8838,-637.18281)"
+       id="text9719"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9717"
+         x="-5600.8838"
+         y="-637.1828">Piece Name: @Skirt tier 3</tspan></text>
+    <text
+       x="-5422.0254"
+       y="-637.1828"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5422.0252,-637.18282)"
+       id="text9723"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9721"
+         x="-5422.0254"
+         y="-637.1828">Sample Size</tspan></text>
+    <text
+       x="-5332.5957"
+       y="-637.1828"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5332.5959,-637.18283)"
+       id="text9727"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9725"
+         x="-5332.5957"
+         y="-637.1828">Quantity: 1</tspan></text>
+    <text
+       x="-5243.1665"
+       y="-637.1828"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5243.1665,-637.18283)"
+       id="text9731"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9729"
+         x="-5243.1665"
+         y="-637.1828">Material: MATERIAL</tspan></text>
+    <text
+       x="-5153.7373"
+       y="-637.18286"
+       style="font-size:81.299px;font-family:Arial;text-anchor:start;fill:#000000"
+       transform="rotate(-90,-5153.7372,-637.18283)"
+       id="text9735"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9733"
+         x="-5153.7373"
+         y="-637.18286">Area: 0.0794 sq.m</tspan></text>
+    <path
+       d="M -6021.1232,-275.1537 V -2595.71 l 1876.7671,-0.559 1874.4228,-1.8957 2.0521,2322.38813 z"
+       style="fill:none;stroke:#000000"
+       id="path9737" />
+    <path
+       d="M -5960.1632,-519.00381 V -2534.7682 l 1815.847,-0.5408 1813.4768,-1.834 1.7827,2017.53659 z"
+       style="fill:none;stroke:#000000"
+       id="path9739" />
+    <text
+       x="-3565.0649"
+       y="-1538.4263"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9743"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9741"
+         x="-3565.0649"
+         y="-1538.4263">32005 Size 10</tspan></text>
+    <text
+       x="-3565.0649"
+       y="-1442.4263"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9747"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9745"
+         x="-3565.0649"
+         y="-1442.4263">10/22/23</tspan></text>
+    <text
+       x="-3565.0649"
+       y="-1346.4263"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9751"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9749"
+         x="-3565.0649"
+         y="-1346.4263">Cut 1</tspan></text>
+    <text
+       x="-3565.0649"
+       y="-1250.4263"
+       style="font-size:96px;font-family:Arial;text-anchor:start;fill:#000000"
+       id="text9755"><tspan
+         sodipodi:role="line"
+         dx="0"
+         dy="0"
+         id="tspan9753"
+         x="-3565.0649"
+         y="-1250.4263">M. Christianson</tspan></text>
+  </g>
+</svg>
