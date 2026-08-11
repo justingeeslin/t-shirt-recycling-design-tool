@@ -42,6 +42,12 @@ function repoAsset(...segments) {
   return assetPath;
 }
 
+function optionalRepoAsset(...segments) {
+  const assetPath = path.resolve(__dirname, "..", ...segments);
+
+  return fs.existsSync(assetPath) ? assetPath : null;
+}
+
 function firstTestImage() {
   const imageDir = path.resolve(__dirname, "..", "test-images");
 
@@ -152,6 +158,108 @@ test("uploads an SVG pattern and places one instance on the board", async ({
   await expect(
     page.locator(`#board [data-piece-kind="${pieceKind}"][role="garment"]`),
   ).toHaveCount(1);
+});
+
+test("uploads a multi-shape SVG pattern and preserves its parts on the board", async ({
+  page,
+}) => {
+  const multiShapeSvg = optionalRepoAsset(
+    "test-svg",
+    "32005 t-shirt dress graded production pattern_revised no-seam base-size-only.dxf_1_copy_1.svg",
+  );
+
+  test.skip(
+    !multiShapeSvg,
+    "The multi-shape t-shirt dress fixture is expected in test-svg/.",
+  );
+
+  const sourcePathCount =
+    fs.readFileSync(multiShapeSvg, "utf8").match(/<path\b/g)?.length || 0;
+
+  expect(sourcePathCount).toBeGreaterThan(1);
+
+  await openApp(page);
+
+  const controls = page.locator(
+    "uploadable-palette#pattern-palette piece-quantity-control",
+  );
+  const initialControlCount = await controls.count();
+
+  await page
+    .locator("uploadable-palette#pattern-palette #svgPieceUpload")
+    .setInputFiles(multiShapeSvg);
+
+  await expect(controls).toHaveCount(initialControlCount + 1);
+
+  const uploadedControl = controls.nth(initialControlCount);
+  const pieceKind = await uploadedControl.getAttribute("piece-kind");
+
+  expect(pieceKind).toMatch(/^uploaded-32005-t-shirt-dress-/);
+
+  const templateMetrics = await uploadedControl.evaluate((control) => {
+    const template = control.querySelector('template[slot="shape"]');
+    const shapeSvg = template?.content.querySelector("svg");
+    const root = shapeSvg
+      ? Array.from(shapeSvg.children).find((node) => node instanceof SVGElement)
+      : null;
+
+    return {
+      pathCount: root?.querySelectorAll("path").length || 0,
+      rootRole: root?.getAttribute("role") || "",
+      rootTag: root?.tagName.toLowerCase() || "",
+    };
+  });
+
+  expect(templateMetrics.rootTag).toBe("g");
+  expect(templateMetrics.rootRole).toBe("garment");
+  expect(templateMetrics.pathCount).toBe(sourcePathCount);
+
+  await uploadedControl.locator("input.qty").fill("1");
+
+  const boardPiece = page.locator(
+    `#board [data-piece-kind="${pieceKind}"][role="garment"]`,
+  );
+
+  await expect(boardPiece).toHaveCount(1);
+
+  const boardMetrics = await boardPiece.evaluate((piece) => {
+    const board = piece.ownerSVGElement;
+    const boardRect = board.getBoundingClientRect();
+    const pieceRect = piece.getBoundingClientRect();
+    const strokedPathCount = Array.from(piece.querySelectorAll("path")).filter(
+      (path) => {
+        const style = getComputedStyle(path);
+        const bbox = path.getBBox();
+        const strokeWidth = Number.parseFloat(style.strokeWidth);
+
+        return (
+          style.stroke !== "none" &&
+          Number.isFinite(strokeWidth) &&
+          strokeWidth > 0 &&
+          bbox.width > 0 &&
+          bbox.height > 0
+        );
+      },
+    ).length;
+
+    return {
+      intersectsBoard:
+        pieceRect.right > boardRect.left &&
+        pieceRect.left < boardRect.right &&
+        pieceRect.bottom > boardRect.top &&
+        pieceRect.top < boardRect.bottom,
+      pathCount: piece.querySelectorAll("path").length,
+      pieceHeight: pieceRect.height,
+      pieceWidth: pieceRect.width,
+      strokedPathCount,
+    };
+  });
+
+  expect(boardMetrics.pathCount).toBe(sourcePathCount);
+  expect(boardMetrics.strokedPathCount).toBeGreaterThan(1);
+  expect(boardMetrics.intersectsBoard).toBe(true);
+  expect(boardMetrics.pieceWidth).toBeGreaterThan(0);
+  expect(boardMetrics.pieceHeight).toBeGreaterThan(0);
 });
 
 test("uploads an SVG stock shape and places one stock instance on the board", async ({
