@@ -5,6 +5,9 @@
   height="500"
 >
 
+  <path id="front-shell" d="M 12 8 C 36 2 78 2 108 10 L 102 82 L 18 82 Z" fill="transparent" stroke="#0a75bd" stroke-width="3"/>
+  <path id="front-neck" d="M 46 8 C 52 24 69 24 76 9" fill="none" stroke="#0a75bd" stroke-width="3"/>
+
   <!-- Circle -->
   <circle
 	cx="120"
