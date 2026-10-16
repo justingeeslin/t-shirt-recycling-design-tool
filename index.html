@@ -102,6 +102,14 @@
         text-transform: uppercase;
       }
 
+      .board-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-end;
+      }
+
+      .board-action-button,
       .download-button {
         appearance: none;
         border: 1px solid var(--border);
@@ -116,8 +124,209 @@
         padding: 0.65rem 0.9rem;
       }
 
+      .board-action-button:hover,
       .download-button:hover {
         border-color: var(--focus);
+      }
+
+      .preferences-modal[hidden] {
+        display: none;
+      }
+
+      .preferences-modal {
+        align-items: center;
+        background: rgba(0, 0, 0, 0.42);
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        padding: 20px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1100;
+      }
+
+      .preferences-dialog {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+        color: var(--text);
+        display: grid;
+        gap: 16px;
+        max-width: min(420px, calc(100vw - 32px));
+        padding: 20px;
+        width: 100%;
+      }
+
+      .preferences-dialog h2 {
+        font-size: 1.1rem;
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      .preferences-fields {
+        display: grid;
+        gap: 12px;
+      }
+
+      .preferences-field {
+        display: grid;
+        gap: 6px;
+        font-size: 0.9rem;
+        font-weight: 650;
+      }
+
+      .preferences-field input {
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        box-sizing: border-box;
+        color: var(--text);
+        background: var(--surface);
+        font: inherit;
+        font-weight: 400;
+        min-height: 38px;
+        padding: 8px 10px;
+        width: 100%;
+      }
+
+      .preferences-error {
+        color: #b00020;
+        font-size: 0.85rem;
+        margin: 0;
+      }
+
+      .preferences-status {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        margin: 0;
+        min-height: 1.2em;
+      }
+
+      .preferences-status:empty {
+        display: none;
+      }
+
+      .preferences-actions {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+      }
+
+      .preferences-actions button {
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: var(--surface-muted);
+        color: var(--text);
+        cursor: pointer;
+        font: inherit;
+        min-height: 36px;
+        padding: 8px 12px;
+      }
+
+      .preferences-actions button[type="submit"] {
+        background: var(--focus);
+        border-color: var(--focus);
+        color: white;
+      }
+
+      .scale-modal[hidden] {
+        display: none;
+      }
+
+      .scale-modal {
+        align-items: center;
+        background: rgba(0, 0, 0, 0.42);
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        padding: 20px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1200;
+      }
+
+      .scale-dialog {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+        color: var(--text);
+        display: grid;
+        gap: 16px;
+        max-width: min(420px, calc(100vw - 32px));
+        padding: 20px;
+        width: 100%;
+      }
+
+      .scale-dialog h2,
+      .scale-dialog p {
+        margin: 0;
+      }
+
+      .scale-dialog h2 {
+        font-size: 1.1rem;
+        line-height: 1.2;
+      }
+
+      .scale-description {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .scale-options {
+        border: 0;
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .scale-option {
+        align-items: center;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        min-height: 42px;
+        padding: 9px 10px;
+      }
+
+      .scale-option:has(input:checked) {
+        border-color: var(--focus);
+        box-shadow: 0 0 0 1px var(--focus);
+      }
+
+      .scale-option input {
+        accent-color: var(--focus);
+        margin: 0;
+      }
+
+      .scale-actions {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+      }
+
+      .scale-actions button {
+        background: var(--surface-muted);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        color: var(--text);
+        cursor: pointer;
+        font: inherit;
+        min-height: 36px;
+        padding: 8px 12px;
+      }
+
+      .scale-actions button[type="submit"] {
+        background: var(--focus);
+        border-color: var(--focus);
+        color: white;
       }
 
       .board-panel {
@@ -197,6 +406,12 @@
         outline-offset: 3px;
       }
 
+      @media (prefers-color-scheme: dark) {
+        .preferences-error {
+          color: #ff8a8a;
+        }
+      }
+
       @media (max-width: 860px) {
         main {
           grid-template-columns: 1fr;
@@ -233,13 +448,24 @@
       <section class="board-panel" aria-labelledby="board-title">
         <div class="board-header">
           <h2 class="board-title" id="board-title">Packboard</h2>
-          <button
-            class="download-button"
-            id="download-board-svg"
-            type="button"
-          >
-            Download SVG
-          </button>
+          <div class="board-actions">
+            <button
+              class="board-action-button"
+              id="open-preferences"
+              type="button"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+            >
+              Preferences
+            </button>
+            <button
+              class="download-button"
+              id="download-board-svg"
+              type="button"
+            >
+              Download SVG
+            </button>
+          </div>
         </div>
         <pattern-pack-board>
           <div class="board-scroll">
@@ -269,6 +495,81 @@
       </section>
     </main>
 
+    <div class="preferences-modal" id="preferences-modal" hidden>
+      <form
+        class="preferences-dialog"
+        id="preferences-form"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="preferences-title"
+      >
+        <h2 id="preferences-title">Preferences</h2>
+        <div class="preferences-fields">
+          <label class="preferences-field">
+            DXF conversion scale
+            <input
+              id="preference-dxf-conversion-scale"
+              inputmode="decimal"
+              min="0"
+              required
+              step="any"
+              type="number"
+            >
+          </label>
+        </div>
+        <p
+          class="preferences-error"
+          id="preferences-error"
+          role="alert"
+          hidden
+        ></p>
+        <p
+          class="preferences-status"
+          id="preferences-status"
+          role="status"
+          aria-live="polite"
+        ></p>
+        <div class="preferences-actions">
+          <button id="preferences-cancel" type="button">Cancel</button>
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="scale-modal" id="scale-modal" hidden>
+      <form
+        class="scale-dialog"
+        id="scale-form"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="scale-title"
+        aria-describedby="scale-description"
+      >
+        <h2 id="scale-title">Scale</h2>
+        <p class="scale-description" id="scale-description">
+          Choose the unit used by this pattern.
+        </p>
+        <fieldset class="scale-options" aria-label="Pattern scale">
+          <label class="scale-option">
+            <input type="radio" name="scale-unit" value="in" required>
+            <span>Inch</span>
+          </label>
+          <label class="scale-option">
+            <input type="radio" name="scale-unit" value="cm" required>
+            <span>Centimeter (cm)</span>
+          </label>
+          <label class="scale-option">
+            <input type="radio" name="scale-unit" value="mm" required checked>
+            <span>Millimeter (mm)</span>
+          </label>
+        </fieldset>
+        <div class="scale-actions">
+          <button id="scale-cancel" type="button">Cancel</button>
+          <button type="submit">Continue</button>
+        </div>
+      </form>
+    </div>
+
     <script type="module">
       import "/node_modules/packed-patterns-and-stock-html-element/src/UploadablePalette.js";
       import "/src/ScrollablePatternPackBoard.js";
@@ -276,9 +577,30 @@
       const patternPalette = document.getElementById("pattern-palette");
       const stockPalette = document.getElementById("stock-palette");
       const downloadBoardSvgButton = document.getElementById("download-board-svg");
+      const openPreferencesButton = document.getElementById("open-preferences");
+      const preferencesModal = document.getElementById("preferences-modal");
+      const preferencesForm = document.getElementById("preferences-form");
+      const preferencesCancelButton = document.getElementById("preferences-cancel");
+      const preferencesDxfScaleInput = document.getElementById(
+        "preference-dxf-conversion-scale",
+      );
+      const preferencesError = document.getElementById("preferences-error");
+      const preferencesStatus = document.getElementById("preferences-status");
+      const patternUploadInput = patternPalette.fileInput;
+      const scaleModal = document.getElementById("scale-modal");
+      const scaleForm = document.getElementById("scale-form");
+      const scaleCancelButton = document.getElementById("scale-cancel");
 
       const SVG_NS = "http://www.w3.org/2000/svg";
       const PRINT_STROKE_COLOR = "#000000";
+      const DXF_SCALE_BY_UNIT = Object.freeze({
+        mm: "1",
+        cm: "10",
+        in: "25.4",
+      });
+      const PREFERENCES_STORAGE_KEY =
+        "t-shirt-recycling-design-tool:preferences";
+      const DEFAULT_DXF_CONVERSION_SCALE = "0.1";
       const T_SHIRT_STOCK_POINTS =
         "561.00,90.00 441.00,29.00 350.00,0.00 327.00,15.00 286.00,21.00 235.00,17.00 202.00,2.00 123.00,30.00 0.00,95.00 60.00,202.00 110.00,191.00 111.00,570.00 458.00,566.00 455.00,186.00 505.00,199.00";
       const SVG_PRESENTATION_PROPERTIES = [
@@ -297,7 +619,14 @@
         "stroke-width",
         "vector-effect",
       ];
+      let preferences = loadPreferences();
+      let lastPreferencesFocus = null;
+      let lastScaleFocus = null;
+      let patternUploadAwaitingScale = false;
+      let continuePatternUpload = false;
 
+      applyPreferences(preferences);
+      populatePreferencesForm(preferences);
       patternPalette.addEventListener("svg-uploaded", (event) => {
         console.log("Uploaded SVG added as", event.detail.controlId);
       });
@@ -307,7 +636,221 @@
       });
 
       configureStockPalette(stockPalette);
+      patternUploadInput.addEventListener(
+        "change",
+        promptForPatternScale,
+        { capture: true },
+      );
+      scaleForm.addEventListener("submit", continueUploadWithScale);
+      scaleCancelButton.addEventListener("click", cancelPatternUpload);
+      scaleModal.addEventListener("click", (event) => {
+        if (event.target === scaleModal) {
+          cancelPatternUpload();
+        }
+      });
+      openPreferencesButton.addEventListener("click", openPreferences);
+      preferencesCancelButton.addEventListener("click", () => closePreferences());
+      preferencesForm.addEventListener("submit", savePreferencesFromForm);
+      preferencesModal.addEventListener("click", (event) => {
+        if (event.target === preferencesModal) {
+          closePreferences();
+        }
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !scaleModal.hidden) {
+          event.preventDefault();
+          cancelPatternUpload();
+          return;
+        }
+
+        if (event.key === "Escape" && !preferencesModal.hidden) {
+          event.preventDefault();
+          closePreferences();
+        }
+      });
       downloadBoardSvgButton.addEventListener("click", downloadCurrentBoardSvg);
+
+      function promptForPatternScale(event) {
+        if (continuePatternUpload) {
+          continuePatternUpload = false;
+          return;
+        }
+
+        const files = Array.from(event.currentTarget.files || []);
+
+        if (files.length === 0) {
+          return;
+        }
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        patternUploadAwaitingScale = true;
+        lastScaleFocus =
+          patternPalette.shadowRoot.activeElement || document.activeElement;
+        scaleForm.reset();
+        scaleForm.elements.namedItem("scale-unit").value = "mm";
+        scaleModal.hidden = false;
+        scaleForm.querySelector('input[name="scale-unit"]:checked').focus();
+      }
+
+      function continueUploadWithScale(event) {
+        event.preventDefault();
+
+        if (!patternUploadAwaitingScale) {
+          return;
+        }
+
+        const selectedUnit = new FormData(scaleForm).get("scale-unit");
+        const scale = DXF_SCALE_BY_UNIT[selectedUnit];
+
+        if (!scale) {
+          return;
+        }
+
+        patternPalette.setAttribute("dxf-conversion-scale", scale);
+        patternUploadAwaitingScale = false;
+        closeScaleModal({ restoreFocus: false });
+        continuePatternUpload = true;
+        patternUploadInput.dispatchEvent(
+          new Event("change", { bubbles: true }),
+        );
+      }
+
+      function cancelPatternUpload() {
+        patternUploadAwaitingScale = false;
+        patternUploadInput.value = "";
+        closeScaleModal();
+      }
+
+      function closeScaleModal({ restoreFocus = true } = {}) {
+        scaleModal.hidden = true;
+
+        if (restoreFocus && lastScaleFocus) {
+          lastScaleFocus.focus?.();
+        }
+
+        lastScaleFocus = null;
+      }
+
+      function loadPreferences() {
+        const defaults = {
+          dxfConversionScale:
+            patternPalette.getAttribute("dxf-conversion-scale") ||
+            stockPalette.getAttribute("dxf-conversion-scale") ||
+            DEFAULT_DXF_CONVERSION_SCALE,
+        };
+
+        try {
+          const storedPreferences = JSON.parse(
+            window.localStorage.getItem(PREFERENCES_STORAGE_KEY) || "{}",
+          );
+
+          return {
+            ...defaults,
+            dxfConversionScale: normalizePositiveNumber(
+              storedPreferences.dxfConversionScale ?? defaults.dxfConversionScale,
+              "DXF conversion scale",
+            ),
+          };
+        } catch (error) {
+          console.warn("Could not load preferences.", error);
+          return defaults;
+        }
+      }
+
+      function savePreferencesFromForm(event) {
+        event.preventDefault();
+
+        try {
+          const nextPreferences = {
+            ...preferences,
+            dxfConversionScale: normalizePositiveNumber(
+              preferencesDxfScaleInput.value,
+              "DXF conversion scale",
+            ),
+          };
+
+          preferences = nextPreferences;
+          applyPreferences(preferences);
+          storePreferences(preferences);
+          populatePreferencesForm(preferences);
+          setPreferencesError("");
+          setPreferencesStatus("Preferences saved.");
+          closePreferences({ restoreFocus: false });
+          openPreferencesButton.focus();
+        } catch (error) {
+          setPreferencesStatus("");
+          setPreferencesError(error.message);
+          preferencesDxfScaleInput.focus();
+        }
+      }
+
+      function storePreferences(nextPreferences) {
+        try {
+          window.localStorage.setItem(
+            PREFERENCES_STORAGE_KEY,
+            JSON.stringify(nextPreferences),
+          );
+        } catch (error) {
+          console.warn("Could not store preferences.", error);
+        }
+      }
+
+      function applyPreferences(nextPreferences) {
+        [patternPalette, stockPalette].forEach((palette) => {
+          palette.setAttribute(
+            "dxf-conversion-scale",
+            nextPreferences.dxfConversionScale,
+          );
+        });
+      }
+
+      function populatePreferencesForm(nextPreferences) {
+        preferencesDxfScaleInput.value = nextPreferences.dxfConversionScale;
+      }
+
+      function openPreferences() {
+        populatePreferencesForm(preferences);
+        setPreferencesError("");
+        setPreferencesStatus("");
+        lastPreferencesFocus = document.activeElement;
+        preferencesModal.hidden = false;
+        openPreferencesButton.setAttribute("aria-expanded", "true");
+        preferencesDxfScaleInput.focus();
+        preferencesDxfScaleInput.select();
+      }
+
+      function closePreferences({ restoreFocus = true } = {}) {
+        preferencesModal.hidden = true;
+        openPreferencesButton.setAttribute("aria-expanded", "false");
+        populatePreferencesForm(preferences);
+        setPreferencesError("");
+
+        if (restoreFocus && lastPreferencesFocus) {
+          lastPreferencesFocus.focus?.();
+        }
+
+        lastPreferencesFocus = null;
+      }
+
+      function setPreferencesError(message) {
+        preferencesError.textContent = message;
+        preferencesError.hidden = message === "";
+      }
+
+      function setPreferencesStatus(message) {
+        preferencesStatus.textContent = message;
+      }
+
+      function normalizePositiveNumber(value, label) {
+        const parsedValue = Number(String(value ?? "").trim());
+
+        if (!Number.isFinite(parsedValue) || parsedValue <= 0) {
+          throw new Error(`${label} must be a positive number.`);
+        }
+
+        return String(parsedValue);
+      }
 
       function configureStockPalette(palette) {
         const title = palette.shadowRoot.querySelector("h1");
