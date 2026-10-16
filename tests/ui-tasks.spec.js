@@ -107,10 +107,47 @@ test("renders the latest uploadable palette and packboard shell", async ({ page 
   await expect(page.locator("uploadable-palette#stock-palette h1")).toHaveText(
     "Garment Stock",
   );
-  await expect(page.locator("#download-board-svg")).toHaveText("Download SVG");
+  await expect(page.locator("#download-board-svg")).toHaveText("Download Marker");
+  await expect(page.locator("#pack-board")).toHaveText("Pack");
   await expect(page.locator("#open-preferences")).toHaveText("Preferences");
   await expect(page.locator("pattern-pack-board button#syncBtn")).toHaveText(
     /Pack Garment Pattern Pieces/,
+  );
+});
+
+test("uses primary and secondary board action styles", async ({ page }) => {
+  await openApp(page);
+
+  const packButton = page.locator("#pack-board");
+  const downloadButton = page.locator("#download-board-svg");
+
+  await expect(packButton).toHaveClass(/primary/);
+  await expect(packButton).toHaveCSS("background-color", "rgb(0, 111, 184)");
+  await expect(downloadButton).toHaveClass(/secondary/);
+  await expect(downloadButton).toHaveCSS(
+    "background-color",
+    "rgb(255, 255, 255)",
+  );
+});
+
+test("requests packing from the board action", async ({ page }) => {
+  await openApp(page);
+
+  await page.locator("pattern-pack-board").evaluate((board) => {
+    board.syncNow = () => Promise.resolve(null);
+    board.addEventListener("pack-request", (event) => {
+      board.dataset.packRequestEvent =
+        event instanceof CustomEvent && event.target === board
+          ? "custom-event-on-board"
+          : "invalid";
+    });
+  });
+
+  await page.locator("#pack-board").click();
+
+  await expect(page.locator("pattern-pack-board")).toHaveAttribute(
+    "data-pack-request-event",
+    "custom-event-on-board",
   );
 });
 

@@ -19,6 +19,12 @@
         --stock-stroke: #1b1f24;
         --garment-stroke: #0077cc;
         --focus: #0077cc;
+        --button-primary: #006fb8;
+        --button-primary-hover: #005e9d;
+        --button-primary-active: #004e83;
+        --button-primary-text: #ffffff;
+        --button-secondary-border: #8fa0b3;
+        --button-secondary-hover: #e7f2fb;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -36,6 +42,11 @@
           --stock-stroke: #f5f7fa;
           --garment-stroke: #55b7ff;
           --focus: #55b7ff;
+          --button-primary: #0878c3;
+          --button-primary-hover: #096caf;
+          --button-primary-active: #075f9b;
+          --button-secondary-border: #607086;
+          --button-secondary-hover: #222d3a;
         }
       }
 
@@ -109,24 +120,72 @@
         justify-content: flex-end;
       }
 
-      .board-action-button,
-      .download-button {
+      .board-action-button {
+        align-items: center;
         appearance: none;
         border: 1px solid var(--border);
         border-radius: 8px;
-        background: var(--surface-muted);
-        color: var(--text);
         cursor: pointer;
+        display: inline-flex;
         font: inherit;
         font-size: 0.9rem;
         font-weight: 650;
+        justify-content: center;
         line-height: 1;
+        min-height: 40px;
         padding: 0.65rem 0.9rem;
+        transition:
+          background-color 150ms ease,
+          border-color 150ms ease,
+          box-shadow 150ms ease,
+          color 150ms ease,
+          transform 100ms ease;
       }
 
-      .board-action-button:hover,
-      .download-button:hover {
-        border-color: var(--focus);
+      .board-action-button.primary {
+        background: var(--button-primary);
+        border-color: var(--button-primary);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+        color: var(--button-primary-text);
+      }
+
+      .board-action-button.secondary {
+        background: var(--surface);
+        border-color: var(--button-secondary-border);
+        color: var(--focus);
+      }
+
+      @media (hover: hover) {
+        .board-action-button.primary:hover {
+          background: var(--button-primary-hover);
+          border-color: var(--button-primary-hover);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .board-action-button.secondary:hover {
+          background: var(--button-secondary-hover);
+          border-color: var(--focus);
+        }
+      }
+
+      .board-action-button:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+      }
+
+      .board-action-button.primary:active {
+        background: var(--button-primary-active);
+        border-color: var(--button-primary-active);
+      }
+
+      .board-action-button:active {
+        transform: translateY(1px);
+      }
+
+      .board-action-button:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+        transform: none;
       }
 
       .preferences-modal[hidden] {
@@ -449,7 +508,8 @@
         <div class="board-header">
           <h2 class="board-title" id="board-title">Packboard</h2>
           <div class="board-actions">
-            <button
+
+            <!-- <button
               class="board-action-button"
               id="open-preferences"
               type="button"
@@ -457,13 +517,20 @@
               aria-expanded="false"
             >
               Preferences
-            </button>
+            </button> -->
             <button
-              class="download-button"
+              class="board-action-button secondary"
               id="download-board-svg"
               type="button"
             >
-              Download SVG
+              Download Marker
+            </button>
+            <button
+              class="board-action-button primary"
+              id="pack-board"
+              type="button"
+            >
+              Pack
             </button>
           </div>
         </div>
@@ -576,6 +643,8 @@
 
       const patternPalette = document.getElementById("pattern-palette");
       const stockPalette = document.getElementById("stock-palette");
+      const patternPackBoard = document.querySelector("pattern-pack-board");
+      const packBoardButton = document.getElementById("pack-board");
       const downloadBoardSvgButton = document.getElementById("download-board-svg");
       const openPreferencesButton = document.getElementById("open-preferences");
       const preferencesModal = document.getElementById("preferences-modal");
@@ -648,7 +717,7 @@
           cancelPatternUpload();
         }
       });
-      openPreferencesButton.addEventListener("click", openPreferences);
+      openPreferencesButton?.addEventListener("click", openPreferences);
       preferencesCancelButton.addEventListener("click", () => closePreferences());
       preferencesForm.addEventListener("submit", savePreferencesFromForm);
       preferencesModal.addEventListener("click", (event) => {
@@ -667,6 +736,9 @@
           event.preventDefault();
           closePreferences();
         }
+      });
+      packBoardButton.addEventListener("click", () => {
+        patternPackBoard.dispatchEvent(new CustomEvent("pack-request"));
       });
       downloadBoardSvgButton.addEventListener("click", downloadCurrentBoardSvg);
 
@@ -896,7 +968,7 @@
               points="${T_SHIRT_STOCK_POINTS}"
               fill="none"
               stroke="currentColor"
-              stroke-width="14"
+              stroke-width="3"
               vector-effect="non-scaling-stroke">
             </polygon>
           </svg>
