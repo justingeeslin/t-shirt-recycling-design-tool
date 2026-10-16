@@ -32,6 +32,22 @@ async function setQuantity(page, controlId, value, paletteId = "pattern-palette"
   await expect(input).toHaveValue(String(value));
 }
 
+async function uploadPatternFile(page, file, scaleUnit = "mm") {
+  const scaleLabels = {
+    in: "Inch",
+    cm: "Centimeter (cm)",
+    mm: "Millimeter (mm)",
+  };
+
+  await page
+    .locator("uploadable-palette#pattern-palette #svgPieceUpload")
+    .setInputFiles(file);
+  await expect(page.locator("#scale-modal")).toBeVisible();
+  await page.getByRole("radio", { name: scaleLabels[scaleUnit], exact: true }).check();
+  await page.locator("#scale-form button[type='submit']").click();
+  await expect(page.locator("#scale-modal")).toBeHidden();
+}
+
 function repoAsset(...segments) {
   const assetPath = path.resolve(__dirname, "..", ...segments);
 
@@ -92,9 +108,160 @@ test("renders the latest uploadable palette and packboard shell", async ({ page 
     "Garment Stock",
   );
   await expect(page.locator("#download-board-svg")).toHaveText("Download SVG");
+  await expect(page.locator("#open-preferences")).toHaveText("Preferences");
   await expect(page.locator("pattern-pack-board button#syncBtn")).toHaveText(
     /Pack Garment Pattern Pieces/,
   );
+});
+
+test("stores the DXF scale preference and applies it to upload palettes", async ({
+  page,
+}) => {
+  await openApp(page);
+
+  await expect(page.locator("uploadable-palette#pattern-palette")).toHaveAttribute(
+    "dxf-conversion-scale",
+    "0.1",
+  );
+  await expect(page.locator("uploadable-palette#stock-palette")).toHaveAttribute(
+    "dxf-conversion-scale",
+    "0.1",
+  );
+
+  await page.locator("#open-preferences").click();
+  await expect(page.locator("#preferences-modal")).toBeVisible();
+  await expect(page.locator("#open-preferences")).toHaveAttribute(
+    "aria-expanded",
+    "true",
+  );
+
+  await page.locator("#preference-dxf-conversion-scale").fill("0.05");
+  await page.locator("#preferences-form button[type='submit']").click();
+
+  await expect(page.locator("#preferences-modal")).toBeHidden();
+  await expect(page.locator("#open-preferences")).toHaveAttribute(
+    "aria-expanded",
+    "false",
+  );
+  await expect(page.locator("uploadable-palette#pattern-palette")).toHaveAttribute(
+    "dxf-conversion-scale",
+    "0.05",
+  );
+  await expect(page.locator("uploadable-palette#stock-palette")).toHaveAttribute(
+    "dxf-conversion-scale",
+    "0.05",
+  );
+
+  await expect
+    .poll(() =>
+      page.evaluate(() =>
+        JSON.parse(
+          window.localStorage.getItem(
+            "t-shirt-recycling-design-tool:preferences",
+          ) || "{}",
+        ),
+      ),
+    )
+    .toEqual({ dxfConversionScale: "0.05" });
+
+  await page.reload();
+  await page.waitForFunction(() => {
+    return (
+      customElements.get("uploadable-palette") &&
+      customElements.get("pattern-pack-board")
+    );
+  });
+
+  await expect(page.locator("uploadable-palette#pattern-palette")).toHaveAttribute(
+    "dxf-conversion-scale",
+    "0.05",
+  );
+  await expect(page.locator("uploadable-palette#stock-palette")).toHaveAttribute(
+    "dxf-conversion-scale",
+    "0.05",
+  );
+
+  await page.locator("#open-preferences").click();
+  await expect(page.locator("#preference-dxf-conversion-scale")).toHaveValue(
+    "0.05",
+  );
+});
+
+test("prompts for pattern scale and maps each unit to the DXF endpoint", async ({
+  page,
+}) => {
+  const convertedSvg = fs.readFileSync(
+    repoAsset("tests", "fixtures", "left-sleeve.svg"),
+    "utf8",
+  );
+  const scaleCases = [
+    { unit: "mm", scale: "1" },
+    { unit: "cm", scale: "10" },
+    { unit: "in", scale: "25.4" },
+  ];
+
+  await page.route("**/dxf-to-svg/**", async (route) => {
+    await route.fulfill({
+      body: convertedSvg,
+      contentType: "image/svg+xml",
+      status: 200,
+    });
+  });
+  await openApp(page);
+
+  await page
+    .locator("uploadable-palette#pattern-palette #svgPieceUpload")
+    .setInputFiles({
+      buffer: Buffer.from("0\nEOF\n"),
+      mimeType: "application/dxf",
+      name: "millimeter-pattern.dxf",
+    });
+
+  await expect(page.locator("#scale-modal")).toBeVisible();
+  await expect(page.locator("#scale-title")).toHaveText("Scale");
+  await expect(page.getByRole("radio", { name: "Inch", exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("radio", { name: "Centimeter (cm)", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("radio", { name: "Millimeter (mm)", exact: true }),
+  ).toBeChecked();
+  await page.locator("#scale-cancel").click();
+  await expect(page.locator("#scale-modal")).toBeHidden();
+
+  for (const { unit, scale } of scaleCases) {
+    await page
+      .locator("uploadable-palette#pattern-palette #svgPieceUpload")
+      .setInputFiles({
+        buffer: Buffer.from("0\nEOF\n"),
+        mimeType: "application/dxf",
+        name: `${unit}-pattern.dxf`,
+      });
+    await expect(page.locator("#scale-modal")).toBeVisible();
+    await page.getByRole("radio", {
+      name:
+        unit === "in"
+          ? "Inch"
+          : unit === "cm"
+            ? "Centimeter (cm)"
+            : "Millimeter (mm)",
+      exact: true,
+    }).check();
+
+    const requestPromise = page.waitForRequest((request) =>
+      request.url().includes("/dxf-to-svg/"),
+    );
+    await page.locator("#scale-form button[type='submit']").click();
+    const request = await requestPromise;
+
+    expect(new URL(request.url()).searchParams.get("scale")).toBe(scale);
+    await expect(page.locator("#scale-modal")).toBeHidden();
+    await expect(
+      page.locator(
+        `uploadable-palette#pattern-palette piece-quantity-control[id^="uploaded-${unit}-pattern-"]`,
+      ),
+    ).toHaveCount(1);
+  }
 });
 
 test("adds and removes default pattern pieces through quantity controls", async ({
@@ -142,9 +309,10 @@ test("uploads an SVG pattern and places one instance on the board", async ({
 }) => {
   await openApp(page);
 
-  await page
-    .locator("uploadable-palette#pattern-palette #svgPieceUpload")
-    .setInputFiles(repoAsset("tests", "fixtures", "left-sleeve.svg"));
+  await uploadPatternFile(
+    page,
+    repoAsset("tests", "fixtures", "left-sleeve.svg"),
+  );
 
   const uploadedControl = page.locator(
     'uploadable-palette#pattern-palette piece-quantity-control[id^="uploaded-left-sleeve-"]',
@@ -185,9 +353,7 @@ test("uploads a multi-shape SVG pattern and preserves its parts on the board", a
   );
   const initialControlCount = await controls.count();
 
-  await page
-    .locator("uploadable-palette#pattern-palette #svgPieceUpload")
-    .setInputFiles(multiShapeSvg);
+  await uploadPatternFile(page, multiShapeSvg);
 
   await expect(controls).toHaveCount(initialControlCount + 1);
 
